@@ -1,0 +1,56 @@
+@use "../../../abstract/mixins" as mx;
+
+.header {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    padding: 1.5rem;
+    background-color: transparent;
+    font-family: var(--font-primary);
+    
+    &__inner {
+        @include mx.global_content_wrapper(); 
+        @include mx.flexbox(row, space-between, center);
+    }
+    &__navigation {
+        @include mx.flexbox(row, space-between, center);
+        gap: 2rem;
+    }
+
+    &__button {
+       border-radius: 1rem;
+       border: 1px solid white;
+       padding: 0.3rem;
+       background-color: black;
+       color: rgb(255, 255, 255);
+       font-family: var(--font-primary);
+        
+    }
+
+     &__nav {
+        @include mx.flexbox(row, space-between, center);
+        gap: 1rem;
+        text-decoration: none;
+    }
+
+    &__nav_link {
+        text-decoration: none;
+        color: white;
+         font-family: var(--font-primary);
+    }
+
+    &__logo {
+        @include mx.flexbox(row, space-between, center);
+        gap: 2rem;
+        color: white; 
+    }
+
+     &__logo_text {
+        @include mx.flexbox(row, space-between, center);
+        gap: 2rem;
+        color: white; 
+    }
+
+}

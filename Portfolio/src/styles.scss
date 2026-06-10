@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Fira Code";
+  src: url("../public/assets/fonts/Fira_Code/static/FiraCode-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --font-primary: "Fira Code", monospace; 
+  --hero-gradient: linear-gradient(#1C1C1C, #08463B);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+

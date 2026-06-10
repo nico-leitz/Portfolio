@@ -1,0 +1,14 @@
+@use "../../../abstract/mixins" as mx;
+
+.hero {
+
+     background: var(--hero-gradient);
+     color: white; 
+
+     &__inner {
+          @include mx.global_content_wrapper();
+          @include mx.flexbox(row, center, center);
+          width: 100dvw;
+          height: 100dvh;
+     }
+}
