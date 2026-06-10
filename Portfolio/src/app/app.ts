@@ -11,4 +11,5 @@ import { HeroSection } from "./shared/components/hero-section/hero-section";
 })
 export class App {
   protected readonly title = signal('Portfolio');
+  
 }
