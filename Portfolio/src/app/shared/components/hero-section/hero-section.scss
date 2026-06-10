@@ -1,46 +1,89 @@
-@use "../../../abstract/mixins" as mx;
+@use '../../../abstract/mixins' as mx;
 
 .hero {
+  background-image: url('/assets/hero-background/hero_background.svg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family: 'Fira Code';
 
-     background-image: url("/assets/hero-background/hero_background.svg");
-     background-position: center;
-     background-size: cover;
-     color: white; 
-     font-family: "Fira Code";
+  &__inner {
+    @include mx.global_content_wrapper();
+    @include mx.flexbox(row, center, center);
+    width: 100dvw;
+    height: 100dvh;
+  }
 
-     &__inner {
-          @include mx.global_content_wrapper();
-          @include mx.flexbox(row, center, center);
-          width: 100dvw;
-          height: 100dvh;
-     }
+  &__about_me {
+    @include mx.flexbox(column, center, center);
+    gap: 1.5rem;
+  }
 
-     &__about_me {
-          @include mx.flexbox(column, center, center);
-          gap: 1.5rem;
-     }
-     
-     &__job {
-       font-size: 4.5rem; 
-     }
+  &__job {
+    font-size: 4.5rem;
+  }
 
-     &__name {
-          font-size: 10rem
-     }
+  &__name {
+    font-size: 10rem;
+  }
 
-     &__buttons_wrapper {
-          @include mx.flexbox(row, center, center);
-          gap: 5.5rem;
-     }
+  &__buttons_wrapper {
+    @include mx.flexbox(row, center, center);
+    gap: 5.5rem;
+  }
 
-     &__button {
-          border-radius: 4rem;
-          border: 2px solid white;
-          padding: 2rem 4rem;
-          background-color: transparent;
-          color: white;
-          font-size: 1.5rem;
-          font-weight: bold;
-          cursor: pointer;
-     }
+  &__button {
+    border-radius: 4rem;
+    border: 2px solid white;
+    padding: 2rem 4rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__slider {
+    position: absolute;
+    bottom: 5%;
+    overflow: hidden;
+    max-width: 99.9dvw;
+    padding: 2rem 0;
+    transform: rotate(-2deg);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 20s linear infinite;
+  }
+
+  &__text_group {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-right: 4rem;
+  }
+
+  &__text {
+    font-size: 3rem;
+    font-weight: 500;
+    white-space: nowrap;
+    color: #40d3b0;
+  }
+
+  &__bullet {
+    font-size: 3rem;
+    color: #40d3b0;
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

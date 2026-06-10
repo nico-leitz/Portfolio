@@ -1,64 +1,62 @@
-@use "../../../abstract/mixins" as mx;
+@use '../../../abstract/mixins' as mx;
 
 .header {
-    position: absolute;
-    top: 10;
-    left: 0;
-    width: 100%;
-    z-index: 50;
-    padding: 2rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
-    
+  position: absolute;
+  top: 10;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 2rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+
+  font-family: var(--font-primary);
+  background: linear-gradient(to bottom, #1c1c1c 1%, transparent 80%);
+
+  &__inner {
+    @include mx.global_content_wrapper();
+    @include mx.flexbox(row, space-between, center);
+  }
+
+  &__navigation {
+    @include mx.flexbox(row, space-between, center);
+    gap: 3rem;
+  }
+
+  &__button {
+    border-radius: 10rem;
+    border: 1px solid white;
+    padding: 0.8rem 1.2rem;
+    background-color: black;
+    color: rgb(255, 255, 255);
     font-family: var(--font-primary);
-    background: linear-gradient(to bottom, #1C1C1C 1%, transparent 80%);
-    
-    &__inner {
-        @include mx.global_content_wrapper(); 
-        @include mx.flexbox(row, space-between, center);
-    }
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 
-    &__navigation {
-        @include mx.flexbox(row, space-between, center);
-        gap: 3rem;
-    }
+  &__nav {
+    @include mx.flexbox(row, space-between, center);
+    gap: 2.4rem;
+    text-decoration: none;
+  }
 
-    &__button {
-       border-radius: 10rem;
-       border: 1px solid white;
-       padding: 0.8rem 1.2rem;
-       background-color: black;
-       color: rgb(255, 255, 255);
-       font-family: var(--font-primary);
-       font-size: 1.5rem;
-       cursor: pointer;
-        
-    }
+  &__nav_link {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+  }
 
-     &__nav {
-        @include mx.flexbox(row, space-between, center);
-        gap: 2.4rem;
-        text-decoration: none;
-    }
+  &__logo {
+    @include mx.flexbox(row, space-between, center);
+    gap: 2rem;
+    color: white;
+  }
 
-    &__nav_link {
-        text-decoration: none;
-        color: white;
-        font-family: var(--font-primary);
-        font-size: 2rem;
-    }
-
-    &__logo {
-        @include mx.flexbox(row, space-between, center);
-        gap: 2rem;
-        color: white; 
-    }
-
-     &__logo_text {
-        @include mx.flexbox(row, space-between, center);
-        gap: 2rem;
-        color: white;
-        font-size: 2rem; 
-    }
-
+  &__logo_text {
+    @include mx.flexbox(row, space-between, center);
+    gap: 2rem;
+    color: white;
+    font-size: 2rem;
+  }
 }
