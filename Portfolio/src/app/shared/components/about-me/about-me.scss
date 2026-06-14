@@ -1,0 +1,15 @@
+@use '../../../abstract/mixins' as mx;
+
+.section_about_me {
+
+    color: white;
+    font-family: 'Fira Code';
+    background-color: rgba(28, 28, 28);
+
+    &__inner {
+        @include mx.global_content_wrapper();
+        @include mx.flexbox(row, center, center);
+        width: 100dvw;
+        height: 100dvh;
+  }
+}
