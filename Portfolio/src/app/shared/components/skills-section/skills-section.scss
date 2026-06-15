@@ -9,24 +9,20 @@
 
   background-color: #1a1a1a; 
   
-  background: radial-gradient(
-    circle at 0%, 
-    rgba(8, 70, 59, 0.3) 0%, 
-    #1a1a1a 30%
-  );
-  
-
   &__inner {
     @include mx.global_content_wrapper();
+    @include mx.flexbox(row, space-between, center);
     display: flex;
     justify-content: center;
     width: 100%;
+    background: radial-gradient(
+    circle at 0%, 
+    rgba(8, 70, 59, 0.3) 0%, 
+    #1a1a1a 20%)
   }
 
   &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mx.flexbox(row, space-between, center);
     gap: 9.6rem;
     width: 100%;
   }

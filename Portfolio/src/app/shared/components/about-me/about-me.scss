@@ -9,15 +9,14 @@
 
   &__inner {
     @include mx.global_content_wrapper();
+    @include mx.flexbox(row, space-between, center);
     display: flex;
     justify-content: center;
     width: 100%;
   }
 
   &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mx.flexbox(row, space-between, center);
     gap: 9.6rem;
     width: 100%;
   }

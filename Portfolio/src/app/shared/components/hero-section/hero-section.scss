@@ -10,7 +10,7 @@
   &__inner {
     @include mx.global_content_wrapper();
     @include mx.flexbox(row, center, center);
-    width: 100dvw;
+    width: 100%;
     height: 100dvh;
   }
 
