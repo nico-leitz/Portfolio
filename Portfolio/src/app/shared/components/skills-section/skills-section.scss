@@ -148,6 +148,15 @@
       object-fit: contain;
     }
 
+    .skill_icon {
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .skill_icon:hover {
+      transform: scale(1.2);
+    }
+
     span {
       font-family: 'Fira Code', monospace;
       font-size: 1.4rem;
