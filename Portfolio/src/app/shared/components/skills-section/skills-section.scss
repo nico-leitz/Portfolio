@@ -3,11 +3,9 @@
 .section_skills {
   color: #ffffff;
   font-family: 'Fira Code', monospace;
-  background-color: #1a1a1a;
+    background-color: rgb(15, 15, 15);
   overflow-x: hidden;
   padding: 8rem 0;
-
-  background-color: #1a1a1a; 
   
   &__inner {
     @include mx.global_content_wrapper();
@@ -18,7 +16,7 @@
     background: radial-gradient(
     circle at 0%, 
     rgba(8, 70, 59, 0.3) 0%, 
-    #1a1a1a 20%)
+    rgb(15, 15, 15) 20%)
   }
 
   &__wrapper {

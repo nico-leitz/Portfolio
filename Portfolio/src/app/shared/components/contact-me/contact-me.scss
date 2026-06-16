@@ -4,7 +4,7 @@
   width: 100%;
   padding: clamp(6rem, 10vw, 12rem) 0;
   color: #ffffff;
-  background-color: rgb(26, 26, 26);
+  background-color: rgb(15, 15, 15);
 
   &__inner {
     @include mx.global_content_wrapper();
