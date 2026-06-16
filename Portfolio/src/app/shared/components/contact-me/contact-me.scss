@@ -1,0 +1,220 @@
+@use '../../../abstract/mixins' as mx;
+
+.contact {
+  width: 100%;
+  padding: clamp(6rem, 10vw, 12rem) 0;
+  color: #ffffff;
+
+  &__inner {
+    @include mx.global_content_wrapper();
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 12rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__subtitle {
+    color: #3dcfb6;
+    font-family: var(--font-primary, 'Fira Code', monospace);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 500;
+  }
+
+  &__title {
+    color: #3dcfb6;
+    font-family: var(--font-primary, 'Fira Code', monospace);
+    font-size: clamp(4.8rem, 8vw, 8.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    margin-bottom: 3.2rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__heading {
+    color: #3dcfb6;
+    font-family: var(--font-primary, 'Fira Code', monospace);
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__text {
+    color: #e0e0e0;
+    font-family: var(--font-secondary, 'Karla', sans-serif);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+
+    &--bold {
+      margin-top: 1rem;
+    }
+  }
+
+  &__link {
+    color: #3dcfb6;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 3.2rem 0;
+    border-top: 1px solid rgba(61, 207, 182, 0.4);
+  }
+
+  &__label {
+    color: #3dcfb6;
+    font-family: var(--font-primary, 'Fira Code', monospace);
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 500;
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: var(--font-secondary, 'Karla', sans-serif);
+    font-size: 1.6rem;
+    padding: 0.8rem 0;
+    outline: none;
+    width: 100%;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 6rem;
+  }
+
+  &__policy-group {
+    padding-top: 3.2rem;
+    border-top: 1px solid rgba(61, 207, 182, 0.4);
+  }
+
+  &__checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .form__checkmark::after {
+      display: block;
+    }
+  }
+
+  &__checkmark {
+    position: relative;
+    top: 0rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 2px solid #3dcfb6;
+    border-radius: 2px;
+    background-color: transparent;
+    flex-shrink: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 0.6rem;
+      top: 0.2rem;
+      width: 0.5rem;
+      height: 1.2rem;
+      border: solid #3dcfb6;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__policy-text {
+    color: #e0e0e0;
+    font-family: var(--font-secondary, 'Karla', sans-serif);
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 4.8rem;
+  }
+
+  &__submit {
+    background-color: transparent;
+    color: #ffffff;
+    font-family: var(--font-secondary, 'Karla', sans-serif);
+    font-size: 1.6rem;
+    padding: 1.6rem 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover:not(:disabled) {
+      border-color: #3dcfb6;
+      color: #3dcfb6;
+      background-color: rgba(61, 207, 182, 0.05);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  &__success-message {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 4.8rem;
+    border: 1px solid rgba(61, 207, 182, 0.4);
+    border-radius: 8px;
+    background-color: rgba(61, 207, 182, 0.05);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(1rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
