@@ -2,61 +2,95 @@
 
 .header {
   position: absolute;
-  top: 10;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 50;
-  padding: 2rem 0;
-  padding-left: 8rem;
-  padding-right: 8rem;
-
-  font-family: var(--font-primary);
-  background: linear-gradient(to bottom, #1c1c1c 1%, transparent 80%);
+  padding: 3rem 0;
+  background: linear-gradient(to bottom, rgba(28,28,28,0.8) 1%, transparent 100%);
 
   &__inner {
     @include mx.global_content_wrapper();
-    @include mx.flexbox(row, space-between, center);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &__navigation {
-    @include mx.flexbox(row, space-between, center);
-    gap: 3rem;
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
   }
 
-  &__button {
-    border-radius: 10rem;
-    border: 1px solid white;
-    padding: 0.8rem 1.2rem;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    font-family: var(--font-primary);
-    font-size: 1.5rem;
+  &__lang-toggle {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 3rem;
+    padding: 0;
     cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__lang-text {
+    font-family: var(--font-primary, 'Fira Code', monospace);
+    font-size: 1.6rem;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3rem;
+    transition: all 0.3s ease;
+
+    &--active {
+      background-color: #3dcfb6;
+      color: #1c1c1c;
+      font-weight: 600;
+    }
   }
 
   &__nav {
-    @include mx.flexbox(row, space-between, center);
-    gap: 2.4rem;
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__nav-link {
     text-decoration: none;
+    color: #ffffff;
+    font-family: var(--font-primary, 'Fira Code', monospace);
+    font-size: 1.9rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #3dcfb6;
+    }
   }
 
-  &__nav_link {
-    text-decoration: none;
-    color: white;
-    font-family: var(--font-primary);
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__logo-icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    border: 3px solid #3dcfb6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secondary, 'Karla', sans-serif);
+    font-weight: 700;
     font-size: 2rem;
+    color: #3dcfb6;
   }
 
-  &__logo {
-    @include mx.flexbox(row, space-between, center);
-    gap: 2rem;
-    color: white;
-  }
-
-  &__logo_text {
-    @include mx.flexbox(row, space-between, center);
-    gap: 2rem;
-    color: white;
+  &__logo-text {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-secondary, 'Karla', sans-serif);
     font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
   }
 }

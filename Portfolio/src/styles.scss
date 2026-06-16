@@ -15,6 +15,12 @@
 :root {
   --font-primary: "Fira Code", monospace; 
   --hero-gradient: radial-gradient(ellipse at 85% 25%, #08463B 0%, #1C1C1C 60%);
+  --line-color: rgba(0, 0, 0, 0.321);
+  --line-color-white: #ffffff;
+}
+
+.dark-mode {
+  --line-color: rgba(255, 255, 255, 0.321);
 }
 
 * {

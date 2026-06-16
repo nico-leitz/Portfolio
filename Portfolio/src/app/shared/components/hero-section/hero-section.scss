@@ -5,13 +5,16 @@
   background-position: center;
   background-size: cover;
   color: white;
-  font-family: 'Fira Code';
+  font-family: 'Fira Code', monospace;
+  position: relative;
+  overflow: hidden;
 
   &__inner {
     @include mx.global_content_wrapper();
     @include mx.flexbox(row, center, center);
     width: 100%;
     height: 100dvh;
+    position: relative;
   }
 
   &__about_me {
@@ -41,16 +44,132 @@
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #40d3b0;
+      color: #40d3b0;
+    }
+  }
+
+  &__side {
+    position: absolute;
+    top: 35%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 10;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
+    &--left {
+      left: 7rem;
+
+      .hero__scroll-btn {
+        margin-top: auto;
+      }
+
+      .hero__line {
+        height: 28rem;
+        background-color: #40d3b0;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &--right {
+      right: 7rem;
+
+      .hero__line {
+        height: 24rem;
+        filter: none !important;
+        -webkit-filter: none !important;
+        background-color: #fefefe !important;
+        margin-top: auto;
+      }
+    }
+  }
+
+  &__scroll-btn {
+    width: 2.8rem;
+    height: 5rem;
+    border: 2px solid #40d3b0;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__scroll-arrow {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: arrowBounce 1.6s infinite ease-in-out;
+  }
+
+  &__email {
+    color: white;
+    font-family: 'Fira Code', monospace;
+    font-size: 1.4rem;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #40d3b0;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__social-link {
+    color: white;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #40d3b0;
+    }
+  }
+
+  &__icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  &__line {
+    width: 1px;
+    background-color: transparent !important; 
+    border-left: 1px solid white !important;  
+  
+    isolation: isolate;
   }
 
   &__slider {
     position: absolute;
-    bottom: 5%;
+    bottom: 8%;
     overflow: hidden;
+    width: 100%;
     max-width: 99.9dvw;
     padding: 2rem 0;
     transform: rotate(-2deg);
-    background: rgba(209, 209, 209, 0.323);
+    background: rgba(62, 62, 62, 0.65);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 5;
   }
 
   &__track {
@@ -76,6 +195,16 @@
   &__bullet {
     font-size: 3rem;
     color: #40d3b0;
+  }
+}
+
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(4px);
   }
 }
 

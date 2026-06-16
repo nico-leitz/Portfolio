@@ -1,19 +1,27 @@
-<header>
-    <div class="header">
-        <div class="header__inner">
-        <div class="header__navigation">
-            <button class="header__button">EN DE</button>
-            <nav class="header__nav">
-                <a class="header__nav_link" routerLink="">About me</a>
-                <a class="header__nav_link" routerLink="">Skills</a>
-                <a class="header__nav_link" routerLink="">Projects</a>
-            </nav>
-        </div>
-        <div class="header__logo">
-            <img src="#" alt="">
-            <p class="header__logo_text">Logo</p>
-        </div>
-        </div>
+<header class="header">
+  <div class="header__inner">
+    
+    <div class="header__left">
+      
+      <button class="header__lang-toggle" (click)="toggleLanguage()">
+        <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'EN'">EN</span>
+        <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'DE'">DE</span>
+      </button>
+
+      <nav class="header__nav">
+        <a href="#about" class="header__nav-link" routerLink="">About me</a>
+        <a href="#skills" class="header__nav-link" routerLink="">Skills</a>
+        <a href="#projects" class="header__nav-link" routerLink="">Projects</a>
+      </nav>
     </div>
-   
+
+    <div class="header__logo-container">
+      <div class="header__logo-icon">M</div>
+      <div class="header__logo-text">
+        <span>Lukas</span>
+        <span>Müller</span>
+      </div>
+    </div>
+
+  </div>
 </header>
