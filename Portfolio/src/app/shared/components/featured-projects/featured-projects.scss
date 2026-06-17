@@ -7,10 +7,31 @@
   overflow-x: hidden;
   padding: 8rem 0;
 
+  @media (max-width: 768px) {
+    padding: 6rem 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 4.8rem 0;
+  }
+
   &__inner {
     @include mx.global_content_wrapper();
     @include mx.flexbox(column, space-between, flex-start);
     width: 100%;
+
+    @media (max-width: 1024px) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    @media (max-width: 768px) {
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+    }
+    @media (max-width: 480px) {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
   }
 
   &__content {
@@ -20,6 +41,9 @@
     max-width: 92rem;
     gap: 6.4rem;
 
+    @media (max-width: 768px) {
+      gap: 4.8rem;
+    }
   }
 
   &__header {
@@ -35,6 +59,10 @@
     font-weight: 400;
     margin-bottom: 1.6rem;
     display: block;
+
+    @media (max-width: 768px) {
+      font-size: 1.6rem;
+    }
   }
 
   &__headline {
@@ -42,6 +70,15 @@
     font-size: 6.4rem;
     font-weight: 700;
     margin: 0 0 2.4rem 0;
+    line-height: 1.1;
+
+    @media (max-width: 768px) {
+      font-size: 4.8rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 4rem;
+    }
   }
 
   &__description {
@@ -52,6 +89,10 @@
     color: #ffffff;
     margin: 0;
     max-width: 48rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.6rem;
+    }
   }
 
   &__list {
@@ -73,6 +114,13 @@
       padding-left 0.3s ease;
     cursor: pointer;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+      padding: 3.2rem 0;
+    }
+
     &:hover {
       background-color: rgba(61, 207, 182, 0.05);
 
@@ -88,6 +136,14 @@
       color: #ffffff;
       margin: 0;
       transition: color 0.3s ease;
+
+      @media (max-width: 768px) {
+        font-size: 2.4rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 2rem;
+      }
     }
 
     &__tech {
@@ -95,23 +151,11 @@
       font-size: 1.6rem;
       color: #ffffff;
       text-align: right;
-    }
-  }
 
-  @media (max-width: 768px) {
-    .project_item {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.6rem;
-      padding: 3.2rem 0;
-
-      &__tech {
+      @media (max-width: 768px) {
         text-align: left;
-      }
-
-      &:hover {
-        padding-left: 0;
-        padding-right: 0;
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, 0.8);
       }
     }
   }
