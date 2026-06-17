@@ -100,10 +100,10 @@ export class Testimonials implements OnInit {
     }, 50);
   }
 
-  public getTrackOffset(): string {
-    const stepWidth = 74;
+ public getTrackOffset(): string {
     const centerOfTrack = (this.displayList.length - 1) / 2;
-    const calculatedOffset = (centerOfTrack - this.currentActiveIndex) * stepWidth;
-    return `translateX(${calculatedOffset}rem)`;
+    const shiftSteps = centerOfTrack - this.currentActiveIndex;
+    
+    return `translateX(calc(${shiftSteps} * (var(--card-width) + var(--card-gap))))`;
   }
 }

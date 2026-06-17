@@ -89,6 +89,7 @@
     padding: 0;
     cursor: pointer;
     overflow: hidden;
+    transition: border-color 0.25s ease, transform 0.2s ease;
 
     &--mobile {
       margin-top: 4rem;

@@ -16,6 +16,22 @@
       grid-template-columns: 1fr 1fr;
       gap: 12rem;
     }
+
+    @media (max-width: 1024px) {
+      padding-left: 4rem !important;
+      padding-right: 4rem !important;
+    }
+    @media (max-width: 768px) {
+      padding-left: 2.4rem !important;
+      padding-right: 2.4rem !important;
+      gap: 4.8rem;
+    }
+   
+    @media (max-width: 480px) {
+      padding-left: 1.2rem !important;
+      padding-right: 1.2rem !important;
+      gap: 4rem;
+    }
   }
 
   &__content {
@@ -34,7 +50,7 @@
   &__title {
     color: #3dcfb6;
     font-family: var(--font-primary, 'Fira Code', monospace);
-    font-size: clamp(4.8rem, 8vw, 8.4rem);
+    font-size: clamp(5rem, 8vw, 8.4rem);
     font-weight: 700;
     line-height: 1.1;
     margin: 0;
@@ -88,6 +104,10 @@
     gap: 1.6rem;
     padding: 3.2rem 0;
     border-top: 1px solid rgba(61, 207, 182, 0.4);
+
+    @media (max-width: 480px) {
+      padding: 2.4rem 0;
+    }
   }
 
   &__label {
@@ -120,6 +140,10 @@
   &__policy-group {
     padding-top: 3.2rem;
     border-top: 1px solid rgba(61, 207, 182, 0.4);
+    
+    @media (max-width: 480px) {
+      padding-top: 2.4rem;
+    }
   }
 
   &__checkbox-label {
@@ -177,6 +201,10 @@
     display: flex;
     justify-content: center;
     margin-top: 4.8rem;
+
+    @media (max-width: 480px) {
+      margin-top: 3.2rem;
+    }
   }
 
   &__submit {
@@ -189,6 +217,10 @@
     border-radius: 4rem;
     cursor: pointer;
     transition: all 0.3s ease;
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
 
     &:hover:not(:disabled) {
       border-color: #3dcfb6;

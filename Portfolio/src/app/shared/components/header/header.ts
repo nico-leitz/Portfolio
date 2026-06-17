@@ -9,11 +9,16 @@ import { RouterLink } from "@angular/router";
 })
 export class Header {
   public currentLang = signal<'EN' | 'DE'>('EN');
+  public visualLang = 'EN';
 
   public isMenuOpen = signal<boolean>(false);
 
   public toggleLanguage(): void {
     this.currentLang.update(lang => lang === 'EN' ? 'DE' : 'EN');
+  }
+
+  public toggleVisualLang(): void {
+   this.visualLang = this.visualLang === 'EN' ? 'DE' : 'EN';
   }
 
  public toggleMenu(): void {

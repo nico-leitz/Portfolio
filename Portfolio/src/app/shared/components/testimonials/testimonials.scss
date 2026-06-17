@@ -6,6 +6,24 @@
   overflow: hidden;
   background-color: rgb(15, 15, 15);
 
+  --card-width: 70rem;
+  --card-gap: 4rem;
+
+  @media (max-width: 1024px) {
+    --card-width: calc(80vw - 5rem); 
+    --card-gap: 3.2rem;
+    --card-min-height: 42rem;
+  }
+  @media (max-width: 768px) {
+    --card-width: 60vw;
+    --card-gap: 2.4rem;
+    --card-min-height: 38rem;
+  }
+  @media (max-width: 480px) {
+    --card-width: 90vw;
+    --card-gap: 1.6rem;
+  }
+
   &__inner {
     @include mx.global_content_wrapper();
     display: flex;
@@ -29,19 +47,23 @@
     mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
     padding: clamp(2rem, 4vw, 4rem) 0;
+
+    @media (max-width: 480px) {
+      mask-image: none;
+      -webkit-mask-image: none;
+    }
   }
 
   &__track {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(2rem, 4vw, 4rem); 
+    gap: var(--card-gap);
     width: 100%; 
     transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
 
     &--instant {
       transition: none !important;
-
       .feedback-card {
         transition: none !important;
       }
@@ -102,10 +124,11 @@
   border: 1px solid rgba(61, 207, 182, 0.12);
   border-radius: 3rem;
   
-  width: min(70rem, 85vw); 
+  width: var(--card-width); 
+  min-height: var(--card-min-height);
+  height: auto; 
   padding: clamp(2.4rem, 5vw, 4.8rem);
   flex-shrink: 0;
-  min-height: auto; 
   
   display: flex;
   flex-direction: column;
@@ -125,6 +148,10 @@
     background-color: rgba(61, 207, 182, 0.04);
     opacity: 0.25;
     transform: scale(0.92);
+
+    @media (max-width: 768px) {
+      opacity: 0;
+    }
   }
 
   &__decorator {
@@ -144,6 +171,10 @@
     line-height: 1.6;
     color: #e0e0e0;
     margin: 0;
+    
+    white-space: normal; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   &__meta {
@@ -152,6 +183,7 @@
     justify-content: flex-end;
     gap: 1.6rem;
     width: 100%;
+    margin-top: auto; 
   }
 
   &__divider {

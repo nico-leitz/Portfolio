@@ -9,15 +9,11 @@
     </div>
 
     <div class="header__right">
-
-      <button class="header__lang-toggle" (click)="toggleLanguage()">
-        <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'EN'"
-          >EN</span
-        >
-        <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'DE'"
-          >DE</span
-        >
+      <button class="header__lang-toggle" (click)="toggleVisualLang()">
+        <span class="header__lang-text" [class.header__lang-text--active]="visualLang === 'EN'">EN</span>
+        <span class="header__lang-text" [class.header__lang-text--active]="visualLang === 'DE'">DE</span>
       </button>
+      
       <nav class="header__nav">
         <a href="#about" class="header__nav-link" routerLink="">About me</a>
         <a href="#skills" class="header__nav-link" routerLink="">Skills</a>
@@ -31,19 +27,17 @@
       <span class="line line-3" [class.open]="isMenuOpen()"></span>
     </button>
   </div>
+
   <div class="header__mobile-overlay" [class.open]="isMenuOpen()">
     <nav class="header__mobile-nav">
       <a href="#about" class="header__mobile-link" (click)="toggleMenu()">About me</a>
       <a href="#skills" class="header__mobile-link" (click)="toggleMenu()">Skills</a>
       <a href="#projects" class="header__mobile-link" (click)="toggleMenu()">Projects</a>
     </nav>
-    <button class="header__lang-toggle header__lang-toggle--mobile" (click)="toggleLanguage()">
-      <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'EN'"
-        >EN</span
-      >
-      <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'DE'"
-        >DE</span
-      >
+    
+    <button class="header__lang-toggle header__lang-toggle--mobile" (click)="toggleVisualLang()">
+      <span class="header__lang-text" [class.header__lang-text--active]="visualLang === 'EN'">EN</span>
+      <span class="header__lang-text" [class.header__lang-text--active]="visualLang === 'DE'">DE</span>
     </button>
   </div>
 </header>
