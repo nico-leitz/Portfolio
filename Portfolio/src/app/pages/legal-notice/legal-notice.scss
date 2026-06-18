@@ -1,0 +1,90 @@
+@use '../../abstract/mixins' as mx;
+
+.legal-notice {
+  position: relative;
+  background-color: rgb(15, 15, 15);
+  background-image: radial-gradient(circle at 60% 15%, rgba(30, 85, 75, 0.45) 0%, rgba(15, 15, 15, 1) 55%);
+  min-height: 100vh;
+  padding: 14rem 0 8rem 0; 
+  overflow: hidden;
+
+  &__inner {
+    @include mx.global_content_wrapper();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 1024px) { padding: 0 4rem; }
+    @media (max-width: 768px) { padding: 0 2.4rem; }
+    @media (max-width: 480px) { padding: 0 1.2rem; }
+  }
+
+  &__headline {
+    font-family: 'Fira Code', monospace;
+    font-size: 6.4rem;
+    font-weight: 700;
+    color: #3dcfb6;
+    margin: 0 0 8rem 0;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    @media (max-width: 768px) {
+      font-size: 4.8rem;
+      margin-bottom: 5rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 4rem;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 80rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem; 
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; 
+
+    ul {
+      margin: 0;
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    li, p {
+      font-family: 'Karla', sans-serif;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      color: rgba(61, 207, 182, 0.85); 
+      margin: 0;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+    
+    strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+  }
+
+  &__subheadline {
+    font-family: 'Karla', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+}
