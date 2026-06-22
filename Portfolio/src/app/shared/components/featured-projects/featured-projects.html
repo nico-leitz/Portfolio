@@ -8,20 +8,24 @@
           Explore a selection of my work here - Interact with projects to see my skills in action.
         </p>
       </div>
+
       <div class="section_projects__list">
-        <div class="project_item">
-          <h3 class="project_item__title">Join</h3>
-          <span class="project_item__tech">Angular | TypeScript | HTML | CSS | Firebase</span>
-        </div>
-        <div class="project_item">
-          <h3 class="project_item__title">El Pollo Loco</h3>
-          <span class="project_item__tech">HTML | CSS | JavaScript</span>
-        </div>
-        <div class="project_item">
-          <h3 class="project_item__title">DA Bubble</h3>
-          <span class="project_item__tech">Angular | Firebase | TypeScript</span>
-        </div>
+        @for (project of projects; track project.title) {
+          <div class="project_item" (click)="openProjectDialog(project)">
+            <h3 class="project_item__title">{{ project.title }}</h3>
+            <span class="project_item__tech">{{ project.tech.join(' | ') }}</span>
+          </div>
+        }
       </div>
     </div>
   </div>
 </div>
+
+@if (activeProject) {
+  <app-featured-projects-dialog
+    [project]="activeProject"
+    (closeDialog)="closeProjectDialog()"
+    (nextProject)="nextProject($event)"
+  >
+  </app-featured-projects-dialog>
+}

@@ -7,10 +7,11 @@ import { FeaturedProjects } from "../../shared/components/featured-projects/feat
 import { Testimonials } from '../../shared/components/testimonials/testimonials';
 import { ContactMe } from "../../shared/components/contact-me/contact-me";
 import { FooterSection } from "../../shared/components/footer-section/footer-section";
+import { FeaturedProjectsDialog } from '../../shared/components/featured-projects-dialog/featured-projects-dialog';
 
 @Component({
   selector: 'app-home',
-  imports: [Header, HeroSection, AboutMe, SkillsSection, FeaturedProjects, Testimonials, ContactMe, FooterSection],
+  imports: [Header, HeroSection, AboutMe, SkillsSection, FeaturedProjects, Testimonials, ContactMe, FooterSection,FeaturedProjectsDialog],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

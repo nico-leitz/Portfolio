@@ -1,0 +1,34 @@
+<div class="dialog-overlay" (click)="onClose()">
+  <div class="project-dialog" (click)="$event.stopPropagation()">
+    
+    <button class="project-dialog__close" aria-label="Close" (click)="onClose()">✕</button>
+
+    <div class="project-dialog__layout">
+      <div class="project-dialog__info">
+        <div class="project-dialog__header">
+          <span class="project-dialog__number">{{ project.number }}</span>
+          <h2 class="project-dialog__title">{{ project.title }}</h2>
+        </div>
+
+        <h3 class="project-dialog__subtitle">What is this project about?</h3>
+        <p class="project-dialog__description">{{ project.description }}</p>
+
+        <div class="project-dialog__tech">
+          @for (tech of project.tech; track tech) {
+            <span class="tech-tag">{{ tech }}</span>
+          }
+        </div>
+
+        <div class="project-dialog__actions">
+          <a [href]="project.github" target="_blank" class="project-btn">GitHub ↗</a>
+          <a [href]="project.live" target="_blank" class="project-btn">Live Test ↗</a>
+        </div>
+      </div>
+
+      <div class="project-dialog__media">
+        <img [src]="project.img" [alt]="project.title + ' Preview'" class="project-dialog__img">
+        <button class="project-dialog__next" (click)="onNext($event)">Next project →</button>
+      </div>
+    </div>
+  </div>
+</div>
