@@ -77,7 +77,23 @@
     font-family: var(--font-primary, 'Fira Code', monospace);
     font-size: 1.9rem;
     transition: color 0.3s ease;
-    &:hover { color: #3dcfb6; }
+    position: relative;
+
+    &:hover, &.active {
+      color: #3dcfb6;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: #3dcfb6;
+        border-radius: 50%;
+      }
+    }
   }
 
   &__lang-toggle {
@@ -177,7 +193,22 @@
     font-size: 3rem;
     font-weight: 500;
     transition: color 0.3s ease;
+    position: relative; 
 
-    &:hover { color: #3dcfb6; }
+    &:hover, &.active {
+      color: #3dcfb6;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0.6rem;
+        height: 0.6rem;
+        background-color: #3dcfb6;
+        border-radius: 50%;
+      }
+    }
   }
 }

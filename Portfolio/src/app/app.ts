@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "./shared/components/header/header";
 import { HeroSection } from "./shared/components/hero-section/hero-section";
@@ -13,4 +13,9 @@ import { Home } from "./pages/home/home";
 export class App {
   protected readonly title = signal('Portfolio');
   
+  @HostListener('document:mousemove', ['$event'])
+    onMouseMove(event: MouseEvent) {
+      document.documentElement.style.setProperty('--mouse-x', `${event.clientX}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${event.clientY}px`);
+    }
 }

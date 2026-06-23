@@ -8,6 +8,7 @@ import { Project } from '../../interfaces/project';
   styleUrl: './featured-projects-dialog.scss',
 })
 export class FeaturedProjectsDialog {
+  
   @Input({ required: true }) project!: Project; 
   
   @Output() closeDialog = new EventEmitter<void>();

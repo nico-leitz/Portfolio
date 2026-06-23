@@ -15,9 +15,9 @@
       </button>
       
       <nav class="header__nav">
-        <a href="#about" class="header__nav-link" routerLink="">About me</a>
-        <a href="#skills" class="header__nav-link" routerLink="legal_notice">Skills</a>
-        <a href="#projects" class="header__nav-link" routerLink="">Projects</a>
+        <a href="#about" class="header__nav-link" routerLink="" routerLinkActive="active">About me</a>
+        <a href="#skills" class="header__nav-link" routerLink="legal_notice" routerLinkActive="active">Skills</a>
+        <a href="#projects" class="header__nav-link" routerLink="" routerLinkActive="active">Projects</a>
       </nav>
     </div>
 
@@ -30,9 +30,9 @@
 
   <div class="header__mobile-overlay" [class.open]="isMenuOpen()">
     <nav class="header__mobile-nav">
-      <a href="#about" class="header__mobile-link" (click)="toggleMenu()">About me</a>
-      <a href="#skills" class="header__mobile-link" (click)="toggleMenu()">Skills</a>
-      <a href="#projects" class="header__mobile-link" (click)="toggleMenu()">Projects</a>
+      <a href="#about" class="header__mobile-link" (click)="toggleMenu()" routerLink="" routerLinkActive="active">About me</a>
+      <a href="#skills" class="header__mobile-link" (click)="toggleMenu()" routerLink="legal_notice" routerLinkActive="active">Skills</a>
+      <a href="#projects" class="header__mobile-link" (click)="toggleMenu()" routerLink="" routerLinkActive="active">Projects</a>
     </nav>
     
     <button class="header__lang-toggle header__lang-toggle--mobile" (click)="toggleVisualLang()">
