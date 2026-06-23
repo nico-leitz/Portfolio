@@ -1,8 +1,6 @@
-@use '../../../abstract/mixins' as mx;
-
 .dialog-overlay {
   position: fixed;
-  inset: 0;
+  inset: 0; 
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
   z-index: 1000;
@@ -10,29 +8,35 @@
   align-items: center;
   justify-content: center;
   padding: 2.4rem;
+
+  @media (max-width: 768px) {
+    padding: 1.6rem; 
+  }
 }
 
 .project-dialog {
   position: relative;
   width: 100%;
   max-width: 110rem;
+  max-height: 95vh;    
+  overflow-y: auto; 
   background-color: rgb(15, 15, 15);
-  background-image: radial-gradient(
-    circle at 0% 0%,
-    rgba(30, 85, 75, 0.6) 0%,
-    rgba(15, 15, 15, 1) 60%
-  );
+  background-image: radial-gradient(circle at 0% 0%, rgba(30, 85, 75, 0.6) 0%, rgba(15, 15, 15, 1) 60%);
   border-radius: 3.2rem;
   padding: 6.4rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
 
-  @media (max-width: 1024px) {
-    padding: 4.8rem;
+  &::-webkit-scrollbar { width: 6px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background-color: #3dcfb6; border-radius: 10px; }
+
+  @media (max-width: 1024px) { 
+    padding: 4.8rem; 
   }
-  @media (max-width: 768px) {
-    padding: 3.2rem;
-    border-radius: 2.4rem;
+  
+  @media (max-width: 768px) { 
+    padding: 4.8rem 2.4rem 3.2rem 2.4rem;
+    border-radius: 2.4rem; 
   }
 
   &__close {
@@ -44,10 +48,13 @@
     color: #ffffff;
     font-size: 2.4rem;
     cursor: pointer;
-    transition:
-      color 0.2s ease,
-      transform 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
     z-index: 10;
+
+    @media (max-width: 768px) {
+      top: 1.6rem;
+      right: 1.6rem;
+    }
 
     &:hover {
       color: #3dcfb6;
@@ -62,7 +69,7 @@
 
     @media (max-width: 900px) {
       flex-direction: column;
-      gap: 4.8rem;
+      gap: 3.2rem; 
     }
   }
 
@@ -71,10 +78,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 900px) {
+      order: 2;
+    }
   }
 
   &__header {
     margin-bottom: 3.2rem;
+    @media (max-width: 768px) { margin-bottom: 2.4rem; }
   }
 
   &__number {
@@ -85,6 +97,8 @@
     line-height: 1;
     display: block;
     margin-bottom: 0.8rem;
+
+    @media (max-width: 768px) { font-size: 3.6rem; }
   }
 
   &__title {
@@ -95,9 +109,7 @@
     margin: 0;
     line-height: 1.1;
 
-    @media (max-width: 768px) {
-      font-size: 3.6rem;
-    }
+    @media (max-width: 768px) { font-size: 3.6rem; }
   }
 
   &__subtitle {
@@ -107,9 +119,7 @@
     color: #3dcfb6;
     margin: 0 0 1.6rem 0;
 
-    @media (max-width: 768px) {
-      font-size: 2rem;
-    }
+    @media (max-width: 768px) { font-size: 2rem; }
   }
 
   &__description {
@@ -127,6 +137,8 @@
     gap: 1.6rem;
     margin-bottom: 4.8rem;
 
+    @media (max-width: 768px) { margin-bottom: 3.2rem; }
+
     .tech-tag {
       display: flex;
       align-items: center;
@@ -134,12 +146,6 @@
       font-family: 'Karla', sans-serif;
       font-size: 1.4rem;
       color: #ffffff;
-
-      img {
-        width: 2rem;
-        height: 2rem;
-        object-fit: contain;
-      }
     }
   }
 
@@ -177,14 +183,24 @@
     justify-content: center;
     align-items: flex-end;
     position: relative;
+
+    @media (max-width: 900px) {
+      display: contents; 
+    }
   }
 
   &__img {
     width: 100%;
-    max-width: 52rem;
+    max-width: 52rem; 
     border-radius: 1.6rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     object-fit: cover;
+
+    @media (max-width: 900px) {
+      order: 1;
+      max-width: 100%; 
+      margin-top: 1.6rem;
+    }
   }
 
   &__next {
@@ -196,12 +212,15 @@
     cursor: pointer;
     margin-top: 2.4rem;
     align-self: flex-end;
-    transition:
-      color 0.2s ease,
-      transform 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
     gap: 0.8rem;
+
+    @media (max-width: 900px) {
+      order: 3;
+      margin-top: 0; 
+    }
 
     &:hover {
       color: #ffffff;
