@@ -43,6 +43,8 @@ export class FeaturedProjects {
   ];
 
   activeProject: Project | null = null;
+  
+  hoveredProject: Project | null = null;
 
   openProjectDialog(project: Project): void {
     this.activeProject = project;

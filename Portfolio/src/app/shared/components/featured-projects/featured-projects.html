@@ -1,6 +1,7 @@
 <div class="section_projects">
   <div class="section_projects__inner">
     <div class="section_projects__content">
+      
       <div class="section_projects__header">
         <span class="section_projects__overbox_headline">Portfolio</span>
         <h2 class="section_projects__headline">Featured Projects</h2>
@@ -9,14 +10,35 @@
         </p>
       </div>
 
-      <div class="section_projects__list">
+      <div class="section_projects__list" (mouseleave)="hoveredProject = null">
         @for (project of projects; track project.title) {
-          <div class="project_item" (click)="openProjectDialog(project)">
-            <h3 class="project_item__title">{{ project.title }}</h3>
-            <span class="project_item__tech">{{ project.tech.join(' | ') }}</span>
+          
+          <div class="project_item" 
+               [class.is-active]="hoveredProject === project"
+               (mouseenter)="hoveredProject = project"
+               (click)="openProjectDialog(project)">
+            
+            <div class="project_item__info">
+              <h3 class="project_item__title">
+                {{ project.title }}
+                <span class="project_item__arrow">↗</span>
+              </h3>
+              <span class="project_item__tech">{{ project.tech.join(' | ') }}</span>
+            </div>
+
+            @if (hoveredProject === project) {
+              <div class="project_item__preview">
+                <div class="preview-wrapper">
+                  <img [src]="project.img" [alt]="project.title" class="preview-img">
+                </div>
+              </div>
+            }
+
           </div>
+
         }
       </div>
+
     </div>
   </div>
 </div>
