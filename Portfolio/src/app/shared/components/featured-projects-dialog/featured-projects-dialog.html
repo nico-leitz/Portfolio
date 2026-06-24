@@ -13,9 +13,12 @@
         <h3 class="project-dialog__subtitle">What is this project about?</h3>
         <p class="project-dialog__description">{{ project.description }}</p>
 
-        <div class="project-dialog__tech">
+       <div class="project-dialog__tech">
           @for (tech of project.tech; track tech) {
-            <span class="tech-tag">{{ tech }}</span>
+            <span class="tech-tag">
+              <img [src]="'/assets/skill-icons-dialog/' + tech.toLowerCase() + '.svg'" [alt]="tech" class="tech-icon">
+              {{ tech }}
+            </span>
           }
         </div>
 
