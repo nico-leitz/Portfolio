@@ -1,9 +1,10 @@
 <div class="section_about_me">
   <div class="section_about_me__inner">
     <div class="section_about_me__wrapper">
-      <div class="section_about_me__image">
+      <div class="section_about_me__image" #aboutImage [class.show-effect]="imageVisible()">
         <img src="/assets/about_me/about_me_image.svg" alt="Image of myself" />
       </div>
+
       <div class="section_about_me__info">
         <div class="section_about_me__overbox">
           <span class="section_about_me__overbox_headline">Who I Am</span>
@@ -47,9 +48,7 @@
                 />
                 <p>
                   A brief description of your problem-solving approach. Do you learn from each
-                  challenge as you search for the most efficient or elegant solution? You can
-                  include some keywords like: analytical thinking, creativity, persistence and
-                  collaboration.
+                  challenge as you search for the most efficient or elegant solution?
                 </p>
               </div>
             </div>
