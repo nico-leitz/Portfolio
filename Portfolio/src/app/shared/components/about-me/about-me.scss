@@ -96,7 +96,7 @@
       }
     }
 
-    &.show-effect::after {
+    &:hover::after {
       opacity: 1;
       top: 2rem;
       left: -5rem;
@@ -204,7 +204,7 @@
     font-weight: 400;
     font-size: 2rem;
     line-height: 1.4;
-    text-align: justify;
+    text-align: left;
     color: #ffffff;
     margin: 0;
 
