@@ -1,10 +1,10 @@
 <header class="header">
   <div class="header__inner">
     <div class="header__logo-container">
-      <div class="header__logo-icon">M</div>
+      <div class="header__logo-icon">NL</div>
       <div class="header__logo-text">
-        <span>Lukas</span>
-        <span>Müller</span>
+        <span>Nico</span>
+        <span>Leiteritz</span>
       </div>
     </div>
 
@@ -15,9 +15,18 @@
       </button>
       
       <nav class="header__nav">
-        <a href="#about" class="header__nav-link" routerLink="" routerLinkActive="active">About me</a>
-        <a href="#skills" class="header__nav-link" routerLink="" routerLinkActive="active">Skills</a>
-        <a href="#projects" class="header__nav-link" routerLink="" routerLinkActive="active">Projects</a>
+        <a [routerLink]="['/']" fragment="about" class="header__nav-link" routerLinkActive="active" 
+           [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
+          About me
+        </a>
+        <a [routerLink]="['/']" fragment="skills" class="header__nav-link" routerLinkActive="active" 
+           [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
+          Skills
+        </a>
+        <a [routerLink]="['/']" fragment="projects" class="header__nav-link" routerLinkActive="active" 
+           [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
+          Projects
+        </a>
       </nav>
     </div>
 
@@ -30,9 +39,18 @@
 
   <div class="header__mobile-overlay" [class.open]="isMenuOpen()">
     <nav class="header__mobile-nav">
-      <a href="#about" class="header__mobile-link" (click)="toggleMenu()" routerLink="" routerLinkActive="active">About me</a>
-      <a href="#skills" class="header__mobile-link" (click)="toggleMenu()" routerLink="legal_notice" routerLinkActive="active">Skills</a>
-      <a href="#projects" class="header__mobile-link" (click)="toggleMenu()" routerLink="" routerLinkActive="active">Projects</a>
+      <a [routerLink]="['/']" fragment="about" class="header__mobile-link" (click)="toggleMenu()" routerLinkActive="active" 
+         [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
+        About me
+      </a>
+      <a [routerLink]="['/']" fragment="skills" class="header__mobile-link" (click)="toggleMenu()" routerLinkActive="active" 
+         [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
+        Skills
+      </a>
+      <a [routerLink]="['/']" fragment="projects" class="header__mobile-link" (click)="toggleMenu()" routerLinkActive="active" 
+         [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
+        Projects
+      </a>
     </nav>
     
     <button class="header__lang-toggle header__lang-toggle--mobile" (click)="toggleVisualLang()">
