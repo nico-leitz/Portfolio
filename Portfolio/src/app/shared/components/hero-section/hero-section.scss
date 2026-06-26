@@ -79,6 +79,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    text-decoration: none;
 
     @media (max-width: 768px) {
       padding: 1.2rem 2.4rem;
@@ -170,7 +171,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 
     @media (max-width: 768px) {
       width: 2.4rem;
@@ -273,7 +273,7 @@
   &__track {
     display: flex;
     width: max-content;
-    animation: scrollLeft 20s linear infinite;
+    animation: scrollLeft 90s linear infinite;
   }
 
   &__text_group {
