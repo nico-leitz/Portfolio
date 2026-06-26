@@ -26,7 +26,6 @@
       padding-right: 2.4rem !important;
       gap: 4.8rem;
     }
-   
     @media (max-width: 480px) {
       padding-left: 1.2rem !important;
       padding-right: 1.2rem !important;
@@ -244,6 +243,24 @@
     background-color: rgba(61, 207, 182, 0.05);
     text-align: center;
     animation: fadeIn 0.5s ease;
+  }
+
+  &__error {
+    color: #e07a5f; 
+    font-family: var(--font-secondary, 'Karla', sans-serif);
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+    display: block;
+    animation: fadeIn 0.3s ease;
+
+    &--policy {
+      margin-top: 1.2rem;
+      margin-left: 3.8rem; 
+      
+      @media (max-width: 480px) {
+        margin-left: 0;
+      }
+    }
   }
 }
 

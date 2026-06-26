@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-footer-section',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './footer-section.html',
   styleUrl: './footer-section.scss',
 })
