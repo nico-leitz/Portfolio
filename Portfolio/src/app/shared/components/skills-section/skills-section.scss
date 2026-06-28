@@ -1,15 +1,20 @@
 @use '../../../abstract/mixins' as mx;
+ 
+:host {
+  display: block;
+  width: 100%;
+}
 
 .section_skills {
   color: #ffffff;
   font-family: 'Fira Code', monospace;
-  background-color: rgb(15, 15, 15); 
-  overflow-x: hidden;
-  padding: 8rem 0;
+  background-color: rgb(15, 15, 15);
+  position: relative;
   
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  // DIE ULTIMATIVE RETTUNG: Garantiert absolut KEINE Scrollbalken mehr (weder X noch Y)
+  overflow: hidden; 
+  
+  padding: 8rem 0;
 
   @media (max-width: 768px) {
     padding: 5rem 0;
@@ -17,26 +22,63 @@
   @media (max-width: 480px) {
     padding: 4rem 0;
   }
-  
+
   &__inner {
     @include mx.global_content_wrapper();
     @include mx.flexbox(row, space-between, center);
     display: flex;
     justify-content: center;
     width: 100%;
-    background-image: radial-gradient(circle at 0%, rgba(8, 70, 59, 0.5) 0%, rgba(15, 15, 15, 0.939) 20%);
+    position: relative; 
+    z-index: 1;
+
+    // DER REVOLUTIONÄRE GLOW
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -20rem; 
+      transform: translateY(-30%);
+      
+      width: 70rem;       
+      height: 70rem;
+      border-radius: 50%;
+      
+      background: radial-gradient(circle, rgba(8, 70, 59, 0.45) 0%, rgba(15, 15, 15, 0) 70%);
+      filter: blur(90px); 
+      pointer-events: none; 
+      z-index: -1; 
+
+      // RESPONSIVE OPTIMIERUNG: Macht den Glow auf Handys kleiner, damit er kein Chaos anrichtet
+      @media (max-width: 1024px) {
+        width: 55rem;
+        height: 55rem;
+        left: -15rem;
+      }
+      @media (max-width: 768px) {
+        width: 45rem;
+        height: 45rem;
+        left: -10rem;
+      }
+      @media (max-width: 480px) {
+        width: 32rem;
+        height: 32rem;
+        left: -5rem;
+        top: 25%; // Schiebt das Leuchten auf Mobile etwas höher zur Überschrift
+      }
+    }
 
     @media (max-width: 1024px) {
       padding-left: 4rem;
-      padding-right: 4rem; 
+      padding-right: 4rem;
     }
     @media (max-width: 768px) {
       padding-left: 2.4rem;
       padding-right: 2.4rem;
     }
-   
+
     @media (max-width: 480px) {
-      padding-left: 1.2rem; 
+      padding-left: 1.2rem;
       padding-right: 1.2rem;
       max-width: 100%;
     }
@@ -104,7 +146,7 @@
     }
     @media (max-width: 480px) {
       gap: 2rem;
-      padding: 2.4rem 1.6rem; 
+      padding: 2.4rem 1.6rem;
       border-radius: 2.4rem;
     }
   }
@@ -141,11 +183,11 @@
   }
 
   &__description {
-    font-family: 'Fira Code', monospace;
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 1.64;
-    text-align: justify;
+    font-family: 'Karla', monospace;
+    font-weight: 500;
+    font-size: 1.9rem;
+    line-height: 1.5;
+    text-align: left;
     color: #ffffff;
     margin: 0;
 
@@ -238,7 +280,7 @@
       row-gap: 4rem;
     }
     @media (max-width: 480px) {
-      grid-template-columns: repeat(3, 1fr); 
+      grid-template-columns: repeat(3, 1fr);
       row-gap: 3.2rem;
       column-gap: 0.8rem;
     }
@@ -273,7 +315,7 @@
 
     > span {
       font-family: 'Fira Code', monospace;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: #ffffff;
       text-align: center;
       line-height: 1.2;
@@ -285,11 +327,10 @@
 
     .skill_tooltip {
       position: absolute;
-      bottom: calc(100% + 1.8rem); 
+      bottom: calc(100% + 1.8rem);
       left: 50%;
-      
-      
-      background: #ffffff !important; 
+
+      background: #ffffff !important;
       padding: 1.6rem 2.4rem;
       border-radius: 1.8rem;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -308,20 +349,19 @@
       &::after {
         content: '';
         position: absolute;
-        bottom: -6px; 
-        left: 25%;   
+        bottom: -6px;
+        left: 25%;
         width: 12px;
         height: 12px;
         background: #ffffff !important;
-        
-        
-        transform: translateX(-50%) rotate(45deg); 
-        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.12); 
-        z-index: -1; 
+
+        transform: translateX(-50%) rotate(45deg);
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.12);
+        z-index: -1;
       }
 
       &-text {
-        color: #3dcfb6 !important; 
+        color: #3dcfb6 !important;
         font-family: 'Karla', sans-serif;
         font-size: 1.5rem;
         font-weight: 500;
@@ -344,15 +384,15 @@
             width: 3.6rem;
             height: 3.6rem;
             object-fit: contain;
-            cursor: default; 
-            
+            cursor: default;
+
             &:hover {
-              transform: none; 
+              transform: none;
             }
           }
 
           span {
-            color: #3dcfb6 !important; 
+            color: #3dcfb6 !important;
             font-family: 'Karla', sans-serif;
             font-size: 1.2rem;
             font-weight: 700;
@@ -364,7 +404,7 @@
     &:hover .skill_tooltip {
       opacity: 1;
       visibility: visible;
-      transform: translateX(-25%) translateY(0); 
+      transform: translateX(-25%) translateY(0);
     }
   }
 }

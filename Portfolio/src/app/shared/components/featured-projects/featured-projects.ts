@@ -13,7 +13,7 @@ export class FeaturedProjects {
     {
       number: '01',
       title: 'Join',
-      tech: ['CSS', 'HTML', 'Firebase', 'Angular', 'TypeScript'],
+      tech: ['CSS', 'HTML', 'Supabase', 'Angular', 'TypeScript'],
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       img: '/assets/featured-projects/join.svg',
@@ -27,17 +27,7 @@ export class FeaturedProjects {
       description:
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       img: '/assets/featured-projects/epl.svg',
-      github: '#',
-      live: '#',
-    },
-    {
-      number: '03',
-      title: 'DABubble',
-      tech: ['Angular', 'Firebase', 'TypeScript'],
-      description:
-        'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
-      img: '/assets/featured-projects/DABubble.svg',
-      github: '#',
+      github: 'https://github.com/nico-leitz/El_Pollo_Loco',
       live: '#',
     },
   ];
