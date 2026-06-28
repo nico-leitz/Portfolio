@@ -50,7 +50,7 @@
 
         <div class="form__group">
           <label for="message" class="form__label">How can I help you?</label>
-          <textarea id="message" name="message" class="form__input form__textarea" placeholder="Hello Lukas, I am interested in..." ngModel required #messageCtrl="ngModel"></textarea>
+          <textarea id="message" name="message" class="form__input form__textarea" placeholder="Hello Nico, I am interested in..." ngModel required #messageCtrl="ngModel"></textarea>
           
           @if (messageCtrl.invalid && (messageCtrl.touched || contactForm.submitted)) {
             <span class="form__error">What do you need to develop?</span>
