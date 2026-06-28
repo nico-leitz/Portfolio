@@ -20,60 +20,62 @@
     <div class="contact__form-wrapper">
       
       @if (isSubmitted()) {
-        <div class="form__success-message">
-          <h3 class="contact__heading">Thank you!</h3>
-          <p class="contact__text">Your message has been sent. I will get back to you shortly.</p>
+        <div class="modal-overlay">
+          <div class="form__success-message">
+            <h3 class="contact__heading">Thank you!</h3>
+            <p class="contact__text">Your message has been sent. I will get back to you shortly.</p>
+          </div>
         </div>
-      } @else {
-        <form class="form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      } 
+      
+      <form class="form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 
-          <div class="form__group">
-            <label for="name" class="form__label">What's your name?</label>
-            <input type="text" id="name" name="name" class="form__input" placeholder="Your name goes here" ngModel required #nameCtrl="ngModel">
-            
-            @if (nameCtrl.invalid && (nameCtrl.touched || contactForm.submitted)) {
-              <span class="form__error">Oops! it seems your name is missing</span>
-            }
-          </div>
+        <div class="form__group">
+          <label for="name" class="form__label">What's your name?</label>
+          <input type="text" id="name" name="name" class="form__input" placeholder="Your name goes here" ngModel required #nameCtrl="ngModel">
+          
+          @if (nameCtrl.invalid && (nameCtrl.touched || contactForm.submitted)) {
+            <span class="form__error">Oops! it seems your name is missing</span>
+          }
+        </div>
 
-          <div class="form__group">
-            <label for="email" class="form__label">What's your email?</label>
-            <input type="email" id="email" name="email" class="form__input" placeholder="youremail@email.com" ngModel required email #emailCtrl="ngModel">
-            
-            @if (emailCtrl.invalid && (emailCtrl.touched || contactForm.submitted)) {
-              <span class="form__error">Hoppla! your email is required</span>
-            }
-          </div>
+        <div class="form__group">
+          <label for="email" class="form__label">What's your email?</label>
+          <input type="email" id="email" name="email" class="form__input" placeholder="youremail@email.com" ngModel required email #emailCtrl="ngModel">
+          
+          @if (emailCtrl.invalid && (emailCtrl.touched || contactForm.submitted)) {
+            <span class="form__error">Hoppla! your email is required</span>
+          }
+        </div>
 
-          <div class="form__group">
-            <label for="message" class="form__label">How can I help you?</label>
-            <textarea id="message" name="message" class="form__input form__textarea" placeholder="Hello Lukas, I am interested in..." ngModel required #messageCtrl="ngModel"></textarea>
-            
-            @if (messageCtrl.invalid && (messageCtrl.touched || contactForm.submitted)) {
-              <span class="form__error">What do you need to develop?</span>
-            }
-          </div>
+        <div class="form__group">
+          <label for="message" class="form__label">How can I help you?</label>
+          <textarea id="message" name="message" class="form__input form__textarea" placeholder="Hello Lukas, I am interested in..." ngModel required #messageCtrl="ngModel"></textarea>
+          
+          @if (messageCtrl.invalid && (messageCtrl.touched || contactForm.submitted)) {
+            <span class="form__error">What do you need to develop?</span>
+          }
+        </div>
 
-          <div class="form__policy-group">
-            <label class="form__checkbox-label">
-              <input type="checkbox" name="policy" class="form__checkbox" ngModel required #policyCtrl="ngModel">
-              <span class="form__checkmark"></span>
-              <span class="form__policy-text">
-                I've read the <a href="/privacy-policy" class="contact__link">privacy policy</a> and agree to the processing of my data as outlined.
-              </span>
-            </label>
+        <div class="form__policy-group">
+          <label class="form__checkbox-label">
+            <input type="checkbox" name="policy" class="form__checkbox" ngModel required #policyCtrl="ngModel">
+            <span class="form__checkmark"></span>
+            <span class="form__policy-text">
+              I've read the <a href="/privacy-policy" class="contact__link">privacy policy</a> and agree to the processing of my data as outlined.
+            </span>
+          </label>
 
-            @if (policyCtrl.invalid && (policyCtrl.touched || contactForm.submitted)) {
-              <span class="form__error form__error--policy">Please accept the privacy policy.</span>
-            }
-          </div>
+          @if (policyCtrl.invalid && (policyCtrl.touched || contactForm.submitted)) {
+            <span class="form__error form__error--policy">Please accept the privacy policy.</span>
+          }
+        </div>
 
-          <div class="form__actions">
-            <button type="submit" class="form__submit" [disabled]="contactForm.invalid">Say Hello :)</button>
-          </div>
+        <div class="form__actions">
+          <button type="submit" class="form__submit" [disabled]="contactForm.invalid">Say Hello :)</button>
+        </div>
 
-        </form>
-      }
+      </form>
 
     </div>
 

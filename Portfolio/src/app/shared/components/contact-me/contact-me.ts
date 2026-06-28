@@ -16,11 +16,13 @@ export class ContactMe {
       
 
       this.isSubmitted.set(true);
+      document.body.style.overflow = 'hidden';
 
       setTimeout(() => {
         contactForm.resetForm();
         this.isSubmitted.set(false);
-      }, 5000);
+        document.body.style.overflow = '';
+      }, 3000);
     }
   }
 }
