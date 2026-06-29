@@ -19,24 +19,25 @@
   "mindset-text": "Durch kontinuierliches Lernen bleibe ich technisch am Ball, um jederzeit skalierbaren und wartbaren Code zu liefern.",
   "puzzle-text": "Herausforderungen sind für mich Puzzles: Ich suche immer nach der elegantesten und technisch saubersten Lösung."
 },
-  "skills-overview": {
-    "sub-title": "Technologien",
-    "main-title": "Mein Tech-Stack",
-    "description-text": "Mein Schwerpunkt liegt auf der Entwicklung performanter Webanwendungen mit <strong>Angular und TypeScript</strong>. Ich setze auf datengetriebene Architekturen, in denen ich Dienste wie <strong>REST-APIs und Supabase</strong> effizient anbinde. Mein Fokus liegt dabei auf einer sauberen Code-Basis und einer stabilen Performance – ich baue Anwendungen, die nicht nur für den Nutzer funktionieren, sondern auch technisch solide sind.",
-    "cta-headline": "Du hast einen <span class=\"highlight\">anderen Tech-Stack?</span>",
-    "cta-text": "Ich arbeite mich gerne in neue Technologien ein. Wenn dein Projekt ein Framework erfordert, das hier nicht aufgeführt ist: Ich bin schnell in der Einarbeitung und bereit, mich an deine spezifischen Anforderungen anzupassen.",
-    "cta-btn": "Schreib mir",
-    "tooltip-learning": "Das schaue ich mir gerade an:"
-  },
-  "projects-showcase": {
-    "sub-title": "Portfolio",
-    "main-title": "Ausgewählte Arbeiten",
-    "description-text": "Hier ist eine Auswahl an Projekten, an denen ich gearbeitet habe. Klick dich durch und sieh dir an, wie ich Probleme gelöst habe.",
-    "dialog-subtitle": "Was steckt dahinter?",
-    "dialog-btn-github": "GitHub-Repo ↗",
-    "dialog-btn-live": "Live-Demo ↗",
-    "dialog-btn-next": "Nächstes Projekt →"
-  },
+"skills-overview": {
+  "sub-title": "Technologien",
+  "main-title": "Meine Skills",
+  "description-text": "Ich baue moderne Webanwendungen mit Fokus auf <strong>Angular und TypeScript</strong>. Zudem integriere ich datengetrieben <strong>REST-APIs und Supabase</strong>. Durch sauberen Code und intuitives Design stelle ich sicher, dass meine Projekte performant und zugänglich sind.",
+  "cta-headline": "Du brauchst <span class=\"highlight\">weitere Skills?</span>",
+  "cta-text": "Ich begeistere mich für neue Technologien. Sollte dein Projekt Tools außerhalb meines Stacks benötigen, bin ich hochmotiviert, mich schnell einzuarbeiten und mit deinen Anforderungen zu wachsen.",
+  "cta-btn": "Schreib mir",
+  "tooltip-learning": "Ich interessiere mich ebenfalls für:"
+},
+"projects-showcase": {
+  "sub-title": "Portfolio",
+  "main-title": "Meine Projekte",
+  "description-text": "Hier eine Auswahl meiner Arbeit - Klick dich durch und sieh meine Skills in Aktion.",
+  "dialog-subtitle": "Was ist das für ein Projekt?",
+  "description": "Ein Kanban-basierter Task-Manager: Aufgaben lassen sich per Drag & Drop organisieren, Kategorien zuweisen und Teammitgliedern zuordnen.",
+  "dialog-btn-github": "GitHub ↗",
+  "dialog-btn-live": "Live Test ↗",
+  "dialog-btn-next": "Nächstes Projekt →"
+},
   "colleague-feedback": {
     "main-title": "Das sagen andere über unsere Zusammenarbeit"
   },

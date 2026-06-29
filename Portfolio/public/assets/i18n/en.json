@@ -22,17 +22,18 @@
   "skills-overview": {
     "sub-title": "Technologies",
     "main-title": "Skill Set",
-    "description-text": "I specialize in building modern web applications, with a primary focus on <strong>Angular and TypeScript</strong>. My expertise extends to data-driven development, where I seamlessly integrate <strong>REST-APIs and Supabase</strong>. By prioritizing clean code, responsive design, and intuitive user experiences, I ensure that my projects are both performant and accessible.",
+    "description-text": "I build modern web apps, focusing on Angular and TypeScript. My expertise includes data-driven development, integrating REST-APIs and Supabase. By prioritizing clean code and intuitive design, I ensure my projects are both performant and accessible.",
     "cta-headline": "You need <span class=\"highlight\">another skill?</span>",
     "cta-text": "I am genuinely passionate about exploring new technologies. If your project requires a tool outside my current stack, I am highly motivated to quickly adapt and master new systems to grow with your challenges.",
     "cta-btn": "Let's Talk",
-    "tooltip-learning": "I have a special interest in learning:"
+    "tooltip-learning": "I also have a special interest in learning:"
   },
   "projects-showcase": {
     "sub-title": "Portfolio",
     "main-title": "Featured Projects",
     "description-text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
     "dialog-subtitle": "What is this project about?",
+    "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "dialog-btn-github": "GitHub ↗",
     "dialog-btn-live": "Live Test ↗",
     "dialog-btn-next": "Next project →"

@@ -3,28 +3,30 @@
     <div class="section_skills__wrapper">
       <div class="section_skills__info">
         <div class="section_skills__overbox">
-          <span class="section_skills__overbox_headline">Technologies</span>
+          <span class="section_skills__overbox_headline">{{
+            'skills-overview.sub-title' | translate
+          }}</span>
         </div>
         <div class="section_skills__infobox">
-          <h2 class="section_skills__headline">Skill Set</h2>
+          <h2 class="section_skills__headline">{{ 'skills-overview.main-title' | translate }}</h2>
 
           <div class="section_skills__content_group">
-            <p class="section_skills__description">
-              I specialize in building modern web applications, with a primary focus on <strong>Angular and TypeScript</strong>. 
-              My expertise extends to data-driven development, where I seamlessly integrate <strong>REST-APIs and Supabase</strong>. 
-              By prioritizing clean code, responsive design, and intuitive user experiences, I ensure that my projects 
-              are both performant and accessible.
-            </p>
+            <p
+              class="section_skills__description"
+              [innerHTML]="'skills-overview.description-text' | translate"
+            ></p>
 
             <div class="section_skills__cta_box">
-              <h3 class="section_skills__cta_headline">
-                You need <span class="highlight">another skill?</span>
-              </h3>
+              <h3
+                class="section_skills__cta_headline"
+                [innerHTML]="'skills-overview.cta-headline' | translate"
+              ></h3>
               <p class="section_skills__cta_text">
-                I am genuinely passionate about exploring new technologies. If your project requires a tool outside my 
-                current stack, I am highly motivated to quickly adapt and master new systems to grow with your challenges.
+                {{ 'skills-overview.cta-text' | translate }}
               </p>
-              <button [routerLink]="['/']" fragment="contact" class="section_skills__button">Let's Talk</button>
+              <button [routerLink]="['/']" fragment="contact" class="section_skills__button">
+                {{ 'skills-overview.cta-btn' | translate }}
+              </button>
             </div>
           </div>
         </div>
@@ -33,68 +35,70 @@
       <div class="section_skills__grid_area">
         <div class="section_skills__grid">
           <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/html.svg" alt="HTML" />
-            <span>HTML</span>
+            <img class="skill_icon" src="assets/skill-icons/html.svg" alt="HTML" /><span>HTML</span>
           </div>
           <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/css.svg" alt="CSS" />
-            <span>CSS</span>
+            <img class="skill_icon" src="assets/skill-icons/css.svg" alt="CSS" /><span>CSS</span>
           </div>
           <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/javascript.svg" alt="JavaScript" />
-            <span>JavaScript</span>
+            <img class="skill_icon" src="assets/skill-icons/javascript.svg" alt="JavaScript" /><span
+              >JavaScript</span
+            >
           </div>
           <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/material_design.svg" alt="Material Design" />
-            <span>Material<br />Design</span>
+            <img
+              class="skill_icon"
+              src="assets/skill-icons/material_design.svg"
+              alt="Material Design"
+            /><span>Material<br />Design</span>
+          </div>
+          <div class="skill_item">
+            <img class="skill_icon" src="assets/skill-icons/typescript.svg" alt="TypeScript" /><span
+              >TypeScript</span
+            >
+          </div>
+          <div class="skill_item">
+            <img class="skill_icon" src="assets/skill-icons/angular.svg" alt="Angular" /><span
+              >Angular</span
+            >
+          </div>
+          <div class="skill_item">
+            <img class="skill_icon" src="assets/skill-icons/supabase.svg" alt="Supabase" /><span
+              >Supabase</span
+            >
+          </div>
+          <div class="skill_item">
+            <img class="skill_icon" src="assets/skill-icons/git.svg" alt="Git" /><span>Git</span>
+          </div>
+          <div class="skill_item">
+            <img class="skill_icon" src="assets/skill-icons/rest-api.svg" alt="REST-API" /><span
+              >REST-API</span
+            >
+          </div>
+          <div class="skill_item">
+            <img class="skill_icon" src="assets/skill-icons/scrum.svg" alt="Scrum" /><span
+              >Scrum</span
+            >
           </div>
 
-          <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/typescript.svg" alt="TypeScript" />
-            <span>TypeScript</span>
-          </div>
-          <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/angular.svg" alt="Angular" />
-            <span>Angular</span>
-          </div>
-          <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/supabase.svg" alt="Supabase" />
-            <span>Supabase</span>
-          </div>
-          <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/git.svg" alt="Git" />
-            <span>Git</span>
-          </div>
-
-          <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/rest-api.svg" alt="REST-API" />
-            <span>REST-API</span>
-          </div>
-          <div class="skill_item">
-            <img class="skill_icon" src="assets/skill-icons/scrum.svg" alt="Scrum" />
-            <span>Scrum</span>
-          </div>
-          
           <div class="skill_item">
             <img class="skill_icon" src="assets/skill-icons/growth.svg" alt="Growth mindset" />
             <span>Growth<br />mindset</span>
-            
+
             <div class="skill_tooltip">
-              <span class="skill_tooltip-text">I have a special interest in learning</span>
-              
+              <span class="skill_tooltip-text">{{
+                'skills-overview.tooltip-learning' | translate
+              }}</span>
               <div class="skill_tooltip-frameworks">
                 <div class="framework">
-                  <img src="assets/skill-icons/react.svg" alt="React">
-                  <span>React</span>
+                  <img src="assets/skill-icons/react.svg" alt="React" /><span>React</span>
                 </div>
                 <div class="framework">
-                  <img src="assets/skill-icons/vue.svg" alt="Vue.js">
-                  <span>Vue.js</span>
+                  <img src="assets/skill-icons/vue.svg" alt="Vue.js" /><span>Vue.js</span>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
