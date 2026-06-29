@@ -12,8 +12,8 @@
         </div>
       </div>
       <div class="footer__meta">
-        <span class="footer__meta-item">Web Developer</span>
-        <span class="footer__meta-item">Munich Germany</span>
+        <span class="footer__meta-item">{{ 'footer-info.role-text' | translate }}</span>
+        <span class="footer__meta-item">{{ 'footer-info.location-text' | translate }}</span>
       </div>
     </div>
 
@@ -33,7 +33,7 @@
           <a href="mailto:contact@lukasmueller.com" class="footer__link">Email</a>
         </li>
         <li class="footer__link-item">
-          <a href="/legal-notice" routerLink="legal_notice" class="footer__link">Legal Notice</a>
+          <a routerLink="/legal-notice" class="footer__link">{{ 'footer-info.link-legal' | translate }}</a>
         </li>
       </ul>
     </nav>
