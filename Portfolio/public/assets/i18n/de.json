@@ -11,14 +11,14 @@
     "ticker-based": "Wohnhaft: München",
     "ticker-remote": "Remote verfügbar"
   },
-  "about-me-section": {
-    "sub-title": "Über mich",
-    "main-title": "Wer ich bin",
-    "intro-text": "Hallo, ich bin Nico. Ich entwickle leidenschaftlich gerne Software, die nicht nur läuft, sondern auch sauber und effizient strukturiert ist. Mein Ziel ist es, komplexe technische Herausforderungen in einfache, nutzerfreundliche Anwendungen zu übersetzen.",
-    "location-text": "Ich Lebe in Deutschland (nähe München) und arbeite gerne vor Ort oder remote. Für spannende Projekte bin ich flexibel.",
-    "mindset-text": "Technologie entwickelt sich schnell. Ich lerne kontinuierlich dazu, um meine working Tools zu beherrschen und Code zu schreiben, der skalierbar und wartbar ist.",
-    "puzzle-text": "Technische Herausforderungen sehe ich als Ingenieursaufgabe. Mein Anspruch ist es, Architektur und Implementierung so zu wählen, dass das Ergebnis nicht nur die Anforderungen erfüllt, sondern durch saubere Strukturen auch langfristig wartbar und skalierbar bleibt."
-  },
+"about-me-section": {
+  "sub-title": "Wer ich bin",
+  "main-title": "Über mich",
+  "intro-text": "Hi, ich bin Nico Leiteritz. Ich baue saubere, effiziente Software und übersetze komplexe Anforderungen in intuitive digitale Lösungen.",
+  "location-text": "Ich lebe bei München und bin offen für Arbeit vor Ort, remote oder – bei passender Gelegenheit – auch für einen Umzug.",
+  "mindset-text": "Durch kontinuierliches Lernen bleibe ich technisch am Ball, um jederzeit skalierbaren und wartbaren Code zu liefern.",
+  "puzzle-text": "Herausforderungen sind für mich Puzzles: Ich suche immer nach der elegantesten und technisch saubersten Lösung."
+},
   "skills-overview": {
     "sub-title": "Technologien",
     "main-title": "Mein Tech-Stack",
