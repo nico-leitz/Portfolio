@@ -1,0 +1,69 @@
+{
+  "header-menu": {
+    "link-about": "About me",
+    "link-skills": "Skills",
+    "link-projects": "Projects"
+  },
+  "hero-area": {
+    "job-title": "Fullstack Developer",
+    "btn-check-work": "Check my work",
+    "btn-contact": "Contact me",
+    "ticker-based": "Based in Munich",
+    "ticker-remote": "Available for remote work"
+  },
+  "about-me-section": {
+    "sub-title": "Who I Am",
+    "main-title": "About me",
+    "intro-text": "Hi, I'm Nico Leiteritz! I love building clean, efficient software. Inspired by the rapid evolution of technology, I enjoy turning complex ideas into structured, user-friendly digital experiences.",
+    "location-text": "Based in Germany, I am open to both in-house office roles and remote collaborations, or even relocating for the right opportunity.",
+    "mindset-text": "I thrive on continuous learning, constantly mastering new frameworks to stay ahead and write efficient, maintainable code.",
+    "puzzle-text": "I view challenges as puzzles, always aiming for the most scalable and elegant solution possible."
+  },
+  "skills-overview": {
+    "sub-title": "Technologies",
+    "main-title": "Skill Set",
+    "description-text": "I specialize in building modern web applications, with a primary focus on <strong>Angular and TypeScript</strong>. My expertise extends to data-driven development, where I seamlessly integrate <strong>REST-APIs and Supabase</strong>. By prioritizing clean code, responsive design, and intuitive user experiences, I ensure that my projects are both performant and accessible.",
+    "cta-headline": "You need <span class=\"highlight\">another skill?</span>",
+    "cta-text": "I am genuinely passionate about exploring new technologies. If your project requires a tool outside my current stack, I am highly motivated to quickly adapt and master new systems to grow with your challenges.",
+    "cta-btn": "Let's Talk",
+    "tooltip-learning": "I have a special interest in learning:"
+  },
+  "projects-showcase": {
+    "sub-title": "Portfolio",
+    "main-title": "Featured Projects",
+    "description-text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "dialog-subtitle": "What is this project about?",
+    "dialog-btn-github": "GitHub ↗",
+    "dialog-btn-live": "Live Test ↗",
+    "dialog-btn-next": "Next project →"
+  },
+  "colleague-feedback": {
+    "main-title": "What my colleagues say about me"
+  },
+  "contact-area": {
+    "sub-title": "Contact me",
+    "main-title": "Let's work<br>together",
+    "info-heading": "Got a problem to solve?",
+    "info-text": "Don't hesitate to reach out! Tell me about your project and let's figure out how I can bring real value to your team as a developer.",
+    "info-call-to-action": "Need a Fullstack developer? <a href=\"#contact\" class=\"contact__link\">Let's talk!</a>",
+    "modal-success-title": "Thank you!",
+    "modal-success-text": "Your message has been sent. I will get back to you shortly.",
+    "label-name": "What's your name?",
+    "placeholder-name": "Your name goes here",
+    "error-name": "Oops! it seems your name is missing",
+    "label-email": "What's your email?",
+    "placeholder-email": "youremail@email.com",
+    "error-email": "Hoppla! your email is required",
+    "label-message": "How can I help you?",
+    "placeholder-message": "Hello Nico, I am interested in...",
+    "error-message": "What do you need to develop?",
+    "policy-agreement": "I've read the <a href=\"/privacy-policy\" class=\"contact__link\">privacy policy</a> and agree to the processing of my data as outlined.",
+    "error-policy": "Please accept the privacy policy.",
+    "submit-btn": "Say Hello :)"
+  },
+  "footer-info": {
+    "role-text": "Web Developer",
+    "location-text": "Munich Germany",
+    "link-legal": "Legal Notice"
+  }
+}

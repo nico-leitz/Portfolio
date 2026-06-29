@@ -1,0 +1,69 @@
+{
+  "header-menu": {
+    "link-about": "Über mich",
+    "link-skills": "Skills",
+    "link-projects": "Projekte"
+  },
+  "hero-area": {
+    "job-title": "Fullstack-Entwickler",
+    "btn-check-work": "Projekte ansehen",
+    "btn-contact": "Kontakt",
+    "ticker-based": "Standort: München",
+    "ticker-remote": "Remote verfügbar"
+  },
+  "about-me-section": {
+    "sub-title": "Über mich",
+    "main-title": "Wer ich bin",
+    "intro-text": "Hallo, ich bin Nico. Ich entwickle leidenschaftlich gerne Software, die nicht nur läuft, sondern auch sauber und effizient strukturiert ist. Mein Ziel ist es, komplexe technische Herausforderungen in einfache, nutzerfreundliche Anwendungen zu übersetzen.",
+    "location-text": "Ich Lebe in Deutschland (nähe München) und arbeite gerne vor Ort oder remote. Für spannende Projekte bin ich flexibel.",
+    "mindset-text": "Technologie entwickelt sich schnell. Ich lerne kontinuierlich dazu, um meine working Tools zu beherrschen und Code zu schreiben, der skalierbar und wartbar ist.",
+    "puzzle-text": "Technische Herausforderungen sehe ich als Ingenieursaufgabe. Mein Anspruch ist es, Architektur und Implementierung so zu wählen, dass das Ergebnis nicht nur die Anforderungen erfüllt, sondern durch saubere Strukturen auch langfristig wartbar und skalierbar bleibt."
+  },
+  "skills-overview": {
+    "sub-title": "Technologien",
+    "main-title": "Mein Tech-Stack",
+    "description-text": "Mein Schwerpunkt liegt auf der Entwicklung performanter Webanwendungen mit <strong>Angular und TypeScript</strong>. Ich setze auf datengetriebene Architekturen, in denen ich Dienste wie <strong>REST-APIs und Supabase</strong> effizient anbinde. Mein Fokus liegt dabei auf einer sauberen Code-Basis und einer stabilen Performance – ich baue Anwendungen, die nicht nur für den Nutzer funktionieren, sondern auch technisch solide sind.",
+    "cta-headline": "Du hast einen <span class=\"highlight\">anderen Tech-Stack?</span>",
+    "cta-text": "Ich arbeite mich gerne in neue Technologien ein. Wenn dein Projekt ein Framework erfordert, das hier nicht aufgeführt ist: Ich bin schnell in der Einarbeitung und bereit, mich an deine spezifischen Anforderungen anzupassen.",
+    "cta-btn": "Schreib mir",
+    "tooltip-learning": "Das schaue ich mir gerade an:"
+  },
+  "projects-showcase": {
+    "sub-title": "Portfolio",
+    "main-title": "Ausgewählte Arbeiten",
+    "description-text": "Hier ist eine Auswahl an Projekten, an denen ich gearbeitet habe. Klick dich durch und sieh dir an, wie ich Probleme gelöst habe.",
+    "dialog-subtitle": "Was steckt dahinter?",
+    "dialog-btn-github": "GitHub-Repo ↗",
+    "dialog-btn-live": "Live-Demo ↗",
+    "dialog-btn-next": "Nächstes Projekt →"
+  },
+  "colleague-feedback": {
+    "main-title": "Das sagen andere über unsere Zusammenarbeit"
+  },
+  "contact-area": {
+    "sub-title": "Kontakt",
+    "main-title": "Lass uns<br>zusammenarbeiten",
+    "info-heading": "Hast du ein Projekt für mich?",
+    "info-text": "Schreib mir gerne, woran du arbeitest. Ich freue mich immer über neue Herausforderungen und darauf, Teams mit meiner Erfahrung zu unterstützen.",
+    "info-call-to-action": "Suchst du einen Fullstack-Entwickler? <a href=\"#contact\" class=\"contact__link\">Lass uns quatschen!</a>",
+    "modal-success-title": "Nachricht erhalten!",
+    "modal-success-text": "Danke für deine Nachricht. Ich melde mich in den nächsten Tagen bei dir.",
+    "label-name": "Name",
+    "placeholder-name": "Wie darf ich dich nennen?",
+    "error-name": "Dein Name fehlt.",
+    "label-email": "E-Mail-Adresse",
+    "placeholder-email": "deine.email@beispiel.de",
+    "error-email": "Ohne E-Mail kann ich dir leider nicht antworten.",
+    "label-message": "Wie kann ich dir helfen?",
+    "placeholder-message": "Hallo Nico, ich habe ein Projekt und zwar...",
+    "error-message": "Erzähl mir kurz, was du brauchst.",
+    "policy-agreement": "Ich habe die <a href=\"/privacy-policy\" class=\"contact__link\">Datenschutzerklärung</a> gelesen und akzeptiert.",
+    "error-policy": "Bitte stimme der Datenschutzerklärung zu.",
+    "submit-btn": "Nachricht abschicken"
+  },
+  "footer-info": {
+    "role-text": "Webentwickler",
+    "location-text": "München, Deutschland",
+    "link-legal": "Impressum"
+  }
+}
