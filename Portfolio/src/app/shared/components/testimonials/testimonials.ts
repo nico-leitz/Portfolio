@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
 
 interface Testimonial {
   text: string;
@@ -8,7 +9,7 @@ interface Testimonial {
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe, TranslateDirective],
   templateUrl: './testimonials.html',
   styleUrl: './testimonials.scss',
 })

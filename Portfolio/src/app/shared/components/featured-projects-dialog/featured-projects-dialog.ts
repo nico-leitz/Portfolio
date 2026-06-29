@@ -1,9 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Project } from '../../interfaces/project';
+import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-featured-projects-dialog',
-  imports: [],
+  imports: [TranslatePipe, TranslateDirective],
   templateUrl: './featured-projects-dialog.html',
   styleUrl: './featured-projects-dialog.scss',
 })

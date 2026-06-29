@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from "@angular/router";
+import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, TranslatePipe, TranslateDirective],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })

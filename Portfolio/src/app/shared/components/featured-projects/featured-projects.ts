@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Project } from '../../interfaces/project';
 import { FeaturedProjectsDialog } from '../featured-projects-dialog/featured-projects-dialog';
+import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-featured-projects',
-  imports: [FeaturedProjectsDialog],
+  imports: [FeaturedProjectsDialog, TranslatePipe, TranslateDirective],
   templateUrl: './featured-projects.html',
   styleUrl: './featured-projects.scss',
 })

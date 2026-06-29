@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [FormsModule],
+  imports: [FormsModule, TranslatePipe, TranslateDirective],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })
