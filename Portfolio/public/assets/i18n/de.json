@@ -44,7 +44,7 @@
 },
   "contact-area": {
     "sub-title": "Kontakt",
-    "main-title": "Lass uns<br>zusammenarbeiten",
+    "main-title": "Lass uns<br>zusammen-<br>arbeiten",
     "info-heading": "Hast du ein Projekt für mich?",
     "info-text": "Schreib mir gerne, woran du arbeitest. Ich freue mich immer über neue Herausforderungen und darauf, Teams mit meiner Erfahrung zu unterstützen.",
     "info-call-to-action": "Suchst du einen Fullstack-Entwickler? <a href=\"#contact\" class=\"contact__link\">Lass uns quatschen!</a>",
@@ -61,7 +61,7 @@
     "error-message": "Erzähl mir kurz, was du brauchst.",
     "policy-agreement": "Ich habe die <a href=\"/privacy-policy\" class=\"contact__link\">Datenschutzerklärung</a> gelesen und akzeptiert.",
     "error-policy": "Bitte stimme der Datenschutzerklärung zu.",
-    "submit-btn": "Nachricht abschicken"
+    "submit-btn": "Sag Hallo! :)"
   },
   "footer-info": {
     "role-text": "Webentwickler",
