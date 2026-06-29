@@ -4,11 +4,11 @@
     "link-skills": "Skills",
     "link-projects": "Projekte"
   },
-  "hero-area": {
-    "job-title": "Fullstack-Entwickler",
-    "btn-check-work": "Projekte ansehen",
+  "hero-section": {
+    "job-title": "Fullstack Entwickler",
+    "btn-check-work": "Meine Projekte",
     "btn-contact": "Kontakt",
-    "ticker-based": "Standort: München",
+    "ticker-based": "Wohnhaft: München",
     "ticker-remote": "Remote verfügbar"
   },
   "about-me-section": {

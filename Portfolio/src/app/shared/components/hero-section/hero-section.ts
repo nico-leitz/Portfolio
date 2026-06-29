@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from "@angular/router";
-import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
+import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero-section',
@@ -8,4 +8,13 @@ import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.scss',
 })
-export class HeroSection {}
+export class HeroSection {
+  private translate = inject(TranslateService);
+
+  constructor() {
+    this.translate.onLangChange.subscribe((event) => {
+      console.log('HeroSection hat Sprachwechsel bemerkt:', event.lang);
+    });
+
+  }
+}
