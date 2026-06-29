@@ -38,9 +38,10 @@
   "dialog-btn-live": "Live Test ↗",
   "dialog-btn-next": "Nächstes Projekt →"
 },
-  "colleague-feedback": {
-    "main-title": "Das sagen andere über unsere Zusammenarbeit"
-  },
+ "colleague-feedback": {
+  "main-title": "Das sagen Kollegen über mich",
+  "placeholder": "Feedback folgt in Kürze – aktuell fokussiere ich mich auf spannende neue Projekte."
+},
   "contact-area": {
     "sub-title": "Kontakt",
     "main-title": "Lass uns<br>zusammenarbeiten",

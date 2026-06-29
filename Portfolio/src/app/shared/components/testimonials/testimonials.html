@@ -1,53 +1,61 @@
 <section class="feedback-carousel">
   <div class="feedback-carousel__inner">
-    <h2 class="feedback-carousel__title">What my colleagues say about me</h2>
+    <h2 class="feedback-carousel__title">{{ 'colleague-feedback.main-title' | translate }}</h2>
 
     <div class="feedback-carousel__viewport">
       <div class="feedback-carousel__track" 
            [style.transform]="getTrackOffset()"
            [class.feedback-carousel__track--instant]="disableTransition">
         
-        @for (entry of displayList; track $index; let i = $index) {
-          <div class="feedback-card"
-               [class.feedback-card--focused]="i === currentActiveIndex"
-               [class.feedback-card--blurred]="i !== currentActiveIndex">
-            
-            @if (i === currentActiveIndex) {
-              <div class="feedback-card__decorator">“</div>
-            }
-            
+        @if (testimonial.length === 0) {
+          <div class="feedback-card feedback-card--focused">
             <p class="feedback-card__quote">
-              {{ entry.text }}
+              {{ 'colleague-feedback.placeholder' | translate }}
             </p>
-            
-            <div class="feedback-card__meta">
-              <span class="feedback-card__divider"></span>
-              <span class="feedback-card__credits">{{ entry.author }}</span>
-            </div>
           </div>
+        } @else {
+          @for (entry of displayList; track $index; let i = $index) {
+            <div class="feedback-card"
+                 [class.feedback-card--focused]="i === currentActiveIndex"
+                 [class.feedback-card--blurred]="i !== currentActiveIndex">
+              
+              @if (i === currentActiveIndex) {
+                <div class="feedback-card__decorator">“</div>
+              }
+              
+              <p class="feedback-card__quote">
+                {{ entry.text }}
+              </p>
+              
+              <div class="feedback-card__meta">
+                <span class="feedback-card__divider"></span>
+                <span class="feedback-card__credits">{{ entry.author }}</span>
+              </div>
+            </div>
+          }
         }
-
       </div>
     </div>
 
-    <div class="feedback-carousel__navigation">
-      <button class="feedback-carousel__trigger" (click)="arrowBack()">
-        <img class="feedback-carousel__icon" src="assets/testimonials/arrow_back.png" alt="Previous"> 
-      </button>
-      
-      <div class="feedback-carousel__pagination">
-        @for (dot of testimonial; track $index; let i = $index) {
-          <span class="feedback-carousel__dot"
-                [class.feedback-carousel__dot--active]="i === dotIndicator"
-                (click)="jumpTo(i)">
-          </span>
-        }
+    @if (testimonial.length > 1) {
+      <div class="feedback-carousel__navigation">
+        <button class="feedback-carousel__trigger" (click)="arrowBack()">
+          <img class="feedback-carousel__icon" src="assets/testimonials/arrow_back.png" alt="Previous"> 
+        </button>
+        
+        <div class="feedback-carousel__pagination">
+          @for (dot of testimonial; track $index; let i = $index) {
+            <span class="feedback-carousel__dot"
+                  [class.feedback-carousel__dot--active]="i === dotIndicator"
+                  (click)="jumpTo(i)">
+            </span>
+          }
+        </div>
+        
+        <button class="feedback-carousel__trigger" (click)="arrowNext()">
+          <img class="feedback-carousel__icon" src="assets/testimonials/arrow_forward.png" alt="Next">
+        </button>
       </div>
-      
-      <button class="feedback-carousel__trigger" (click)="arrowNext()">
-        <img class="feedback-carousel__icon" src="assets/testimonials/arrow_forward.png" alt="Next">
-      </button>
-    </div>
-
+    }
   </div>
 </section>

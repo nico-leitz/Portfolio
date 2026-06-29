@@ -39,8 +39,9 @@
     "dialog-btn-next": "Next project →"
   },
   "colleague-feedback": {
-    "main-title": "What my colleagues say about me"
-  },
+  "main-title": "What colleagues say about me",
+  "placeholder": "Feedback is coming soon – currently working on exciting new projects!"
+},
   "contact-area": {
     "sub-title": "Contact me",
     "main-title": "Let's work<br>together",
