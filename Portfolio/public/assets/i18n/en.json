@@ -67,5 +67,16 @@
     "role-text": "Web Developer",
     "location-text": "Munich Germany",
     "link-legal": "Legal Notice"
-  }
+  },
+  "legal-notice": {
+  "headline": "Legal Notice",
+  "imprint-sub": "Information according to § 5 TMG",
+  "contact-sub": "Contact",
+  "liability-sub": "Liability for content",
+  "liability-text": "As a service provider, I am responsible for my own content on these pages in accordance with general laws under § 7 (1) TMG.",
+  "copyright-sub": "Copyright",
+  "copyright-text": "The content and works created by the site operator on these pages are subject to German copyright law. Reproduction, processing, distribution, or any form of commercialization requires the written consent of the respective author or creator."
+}
+
+
 }

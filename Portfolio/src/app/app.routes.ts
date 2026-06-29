@@ -13,7 +13,7 @@ export const routes: Routes = [
         component: AboutMe
     },
     {
-        path: "legal_notice",
+        path: "legal-notice",
         component: LegalNotice
     }
 ];

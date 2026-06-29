@@ -67,5 +67,14 @@
     "role-text": "Webentwickler",
     "location-text": "München, Deutschland",
     "link-legal": "Impressum"
-  }
+  },
+  "legal-notice": {
+  "headline": "Impressum",
+  "imprint-sub": "Angaben gemäß § 5 TMG",
+  "contact-sub": "Kontakt",
+  "liability-sub": "Haftung für Inhalte",
+  "liability-text": "Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.",
+  "copyright-sub": "Urheberrecht",
+  "copyright-text": "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+}
 }
