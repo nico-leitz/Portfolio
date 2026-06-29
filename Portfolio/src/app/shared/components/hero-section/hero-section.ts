@@ -9,12 +9,5 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
   styleUrl: './hero-section.scss',
 })
 export class HeroSection {
-  private translate = inject(TranslateService);
-
-  constructor() {
-    this.translate.onLangChange.subscribe((event) => {
-      console.log('HeroSection hat Sprachwechsel bemerkt:', event.lang);
-    });
 
   }
-}
