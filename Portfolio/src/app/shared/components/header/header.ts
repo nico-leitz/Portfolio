@@ -1,6 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core'; 
 import { RouterLink, RouterLinkActive } from "@angular/router";
-import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
+import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -9,25 +9,23 @@ import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
   styleUrl: './header.scss',
 })
 export class Header {
-  public currentLang = signal<'EN' | 'DE'>('EN');
-  public visualLang = 'EN';
 
+  public currentLang = signal<'EN' | 'DE'>('EN');
   public isMenuOpen = signal<boolean>(false);
 
+  private translate = inject(TranslateService);
+
   public toggleLanguage(): void {
-    this.currentLang.update(lang => lang === 'EN' ? 'DE' : 'EN');
+    const newLang = this.currentLang() === 'EN' ? 'DE' : 'EN';
+    this.currentLang.set(newLang);
+
+    this.translate.use(newLang.toLowerCase()); 
   }
 
-  public toggleVisualLang(): void {
-   this.visualLang = this.visualLang === 'EN' ? 'DE' : 'EN';
-  }
-
- public toggleMenu(): void {
+  public toggleMenu(): void {
     this.isMenuOpen.update(value => {
       const newState = !value;
-
       document.body.style.overflow = newState ? 'hidden' : '';
-      
       return newState;
     });
   }

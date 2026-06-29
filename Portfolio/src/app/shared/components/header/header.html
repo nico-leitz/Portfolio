@@ -9,9 +9,9 @@
     </div>
 
     <div class="header__right">
-      <button class="header__lang-toggle" (click)="toggleVisualLang()">
-        <span class="header__lang-text" [class.header__lang-text--active]="visualLang === 'EN'">EN</span>
-        <span class="header__lang-text" [class.header__lang-text--active]="visualLang === 'DE'">DE</span>
+      <button class="header__lang-toggle" (click)="toggleLanguage()">
+        <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'EN'">EN</span>
+        <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'DE'">DE</span>
       </button>
       
       <nav class="header__nav">
@@ -53,9 +53,9 @@
       </a>
     </nav>
     
-    <button class="header__lang-toggle header__lang-toggle--mobile" (click)="toggleVisualLang()">
-      <span class="header__lang-text" [class.header__lang-text--active]="visualLang === 'EN'">EN</span>
-      <span class="header__lang-text" [class.header__lang-text--active]="visualLang === 'DE'">DE</span>
+    <button class="header__lang-toggle header__lang-toggle--mobile" (click)="toggleLanguage()">
+      <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'EN'">EN</span>
+      <span class="header__lang-text" [class.header__lang-text--active]="currentLang() === 'DE'">DE</span>
     </button>
   </div>
 </header>

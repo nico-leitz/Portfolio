@@ -68,10 +68,11 @@
 
   &__nav {
     display: flex;
-    gap: 3rem;
   }
 
   &__nav-link {
+    min-width: 120px;
+    text-align: center;
     text-decoration: none;
     color: #ffffff;
     font-family: var(--font-primary, 'Fira Code', monospace);
