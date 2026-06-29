@@ -17,15 +17,15 @@
       <nav class="header__nav">
         <a [routerLink]="['/']" fragment="about" class="header__nav-link" routerLinkActive="active" 
            [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
-          About me
+          {{ 'header-menu.link-about' | translate }}
         </a>
         <a [routerLink]="['/']" fragment="skills" class="header__nav-link" routerLinkActive="active" 
            [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
-          Skills
+          {{ 'header-menu.link-skills' | translate }}
         </a>
         <a [routerLink]="['/']" fragment="projects" class="header__nav-link" routerLinkActive="active" 
            [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
-          Projects
+          {{ 'header-menu.link-projects' | translate }}
         </a>
       </nav>
     </div>
@@ -41,15 +41,15 @@
     <nav class="header__mobile-nav">
       <a [routerLink]="['/']" fragment="about" class="header__mobile-link" (click)="toggleMenu()" routerLinkActive="active" 
          [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
-        About me
+        {{ 'header-menu.link-about' | translate }}
       </a>
       <a [routerLink]="['/']" fragment="skills" class="header__mobile-link" (click)="toggleMenu()" routerLinkActive="active" 
          [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
-        Skills
+        {{ 'header-menu.link-skills' | translate }}
       </a>
       <a [routerLink]="['/']" fragment="projects" class="header__mobile-link" (click)="toggleMenu()" routerLinkActive="active" 
          [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', fragment: 'exact', matrixParams: 'ignored' }">
-        Projects
+        {{ 'header-menu.link-projects' | translate }}
       </a>
     </nav>
     
