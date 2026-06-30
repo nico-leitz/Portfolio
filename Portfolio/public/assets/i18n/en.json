@@ -59,7 +59,7 @@
     "label-message": "How can I help you?",
     "placeholder-message": "Hello Nico, I am interested in...",
     "error-message": "What do you need to develop?",
-    "policy-agreement": "I've read the <a href=\"/privacy-policy\" class=\"contact__link\">privacy policy</a> and agree to the processing of my data as outlined.",
+    "policy-agreement": "I've read the <a style=\"color: #3dcfb6\" href=\"/privacy-policy\" class=\"contact__link\">privacy policy</a> and agree to the processing of my data as outlined.",
     "error-policy": "Please accept the privacy policy.",
     "submit-btn": "Say Hello :)"
   },

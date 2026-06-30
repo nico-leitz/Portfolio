@@ -85,10 +85,17 @@
     align-items: center;
     justify-content: center;
     padding: 1.2rem;
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.25s ease;
 
     &:hover {
-      transform: scale(1.15);
+      transform: none;
+
+      .feedback-carousel__icon {
+        color: #3dcfb6;
+        fill: #3dcfb6;
+        
+        filter: invert(20%) sepia(36%) saturate(692%) hue-rotate(119deg) brightness(96%) contrast(89%);
+      }
     }
   }
 
@@ -96,6 +103,7 @@
     width: clamp(4rem, 6vw, 5.6rem);
     height: clamp(4rem, 6vw, 5.6rem);
     object-fit: contain;
+    transition: filter 0.25s ease, color 0.25s ease;
   }
 
   &__pagination {

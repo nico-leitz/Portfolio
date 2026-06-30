@@ -47,7 +47,7 @@
     "main-title": "Lass uns<br>zusammen-<br>arbeiten",
     "info-heading": "Hast du ein Projekt für mich?",
     "info-text": "Schreib mir gerne, woran du arbeitest. Ich freue mich immer über neue Herausforderungen und darauf, Teams mit meiner Erfahrung zu unterstützen.",
-    "info-call-to-action": "Suchst du einen Fullstack-Entwickler? <a href=\"#contact\" class=\"contact__link\">Lass uns quatschen!</a>",
+    "info-call-to-action": "Suchst du einen Fullstack-Entwickler? <a style=\"color: #3dcfb6\" href=\"#contact\" class=\"contact__link\">Lass uns quatschen!</a>",
     "modal-success-title": "Nachricht erhalten!",
     "modal-success-text": "Danke für deine Nachricht. Ich melde mich in den nächsten Tagen bei dir.",
     "label-name": "Name",
@@ -59,7 +59,7 @@
     "label-message": "Wie kann ich dir helfen?",
     "placeholder-message": "Hallo Nico, ich habe ein Projekt und zwar...",
     "error-message": "Erzähl mir kurz, was du brauchst.",
-    "policy-agreement": "Ich habe die <a href=\"/privacy-policy\" class=\"contact__link\">Datenschutzerklärung</a> gelesen und akzeptiert.",
+    "policy-agreement": "Ich habe die <a style=\"color: #3dcfb6\" href=\"/privacy-policy\" class=\"contact__link\">Datenschutzerklärung</a> gelesen und akzeptiert.",
     "error-policy": "Bitte stimme der Datenschutzerklärung zu.",
     "submit-btn": "Sag Hallo! :)"
   },

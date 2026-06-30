@@ -135,10 +135,29 @@
     font-family: var(--font-secondary, 'Karla', sans-serif);
     font-size: 1.6rem;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
     transition: color 0.25s ease;
+
+    &::before {
+      content: '•';
+      color: #3dcfb6;
+      font-size: 1.8rem;
+      display: inline-block;
+      width: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: width 0.25s ease, opacity 0.25s ease, margin-right 0.25s ease;
+    }
 
     &:hover {
       color: #3dcfb6; 
+
+      &::before {
+        width: 1.2rem;
+        opacity: 1;
+        margin-right: 0.6rem;
+      }
     }
   }
 }

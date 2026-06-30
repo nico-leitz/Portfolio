@@ -1,6 +1,5 @@
 <section class="contact" id="contact">
   <div class="contact__inner">
-    
     <div class="contact__content">
       <span class="contact__subtitle">{{ 'contact-area.sub-title' | translate }}</span>
       <h2 class="contact__title" [innerHTML]="'contact-area.main-title' | translate"></h2>
@@ -16,7 +15,6 @@
     </div>
 
     <div class="contact__form-wrapper">
-      
       @if (isSubmitted()) {
         <div class="modal-overlay">
           <div class="form__success-message">
@@ -24,10 +22,9 @@
             <p class="contact__text">{{ 'contact-area.modal-success-text' | translate }}</p>
           </div>
         </div>
-      } 
-      
-      <form class="form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      }
 
+      <form class="form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
         <div class="form__group">
           <label for="name" class="form__label">{{ 'contact-area.label-name' | translate }}</label>
           <input type="text" id="name" name="name" class="form__input" [placeholder]="'contact-area.placeholder-name' | translate" ngModel required #nameCtrl="ngModel">
@@ -56,12 +53,13 @@
         </div>
 
         <div class="form__policy-group">
-          <label class="form__checkbox-label">
-            <input type="checkbox" name="policy" class="form__checkbox" ngModel required #policyCtrl="ngModel">
-            <span class="form__checkmark"></span>
-            <span class="form__policy-text" [innerHTML]="'contact-area.policy-agreement' | translate">
-            </span>
-          </label>
+          <div class="form__checkbox-layout">
+            <label class="form__checkbox-wrapper">
+              <input type="checkbox" name="policy" class="form__checkbox" ngModel required #policyCtrl="ngModel">
+              <span class="form__checkmark"></span>
+            </label>
+            <span class="form__policy-text" [innerHTML]="'contact-area.policy-agreement' | translate"></span>
+          </div>
 
           @if (policyCtrl.invalid && (policyCtrl.touched || contactForm.submitted)) {
             <span class="form__error form__error--policy">{{ 'contact-area.error-policy' | translate }}</span>
@@ -71,7 +69,6 @@
         <div class="form__actions">
           <button type="submit" class="form__submit" [disabled]="contactForm.invalid">{{ 'contact-area.submit-btn' | translate }}</button>
         </div>
-
       </form>
     </div>
   </div>
