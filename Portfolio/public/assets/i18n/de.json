@@ -34,8 +34,8 @@
   "description-text": "Hier eine Auswahl meiner Arbeit - Klick dich durch und sieh meine Skills in Aktion.",
   "dialog-subtitle": "Was ist das für ein Projekt?",
   "description": "Ein Kanban-basierter Task-Manager: Aufgaben lassen sich per Drag & Drop organisieren, Kategorien zuweisen und Teammitgliedern zuordnen.",
-  "dialog-btn-github": "GitHub ↗",
-  "dialog-btn-live": "Live Test ↗",
+  "dialog-btn-github": "GitHub",
+  "dialog-btn-live": "Live Test",
   "dialog-btn-next": "Nächstes Projekt →"
 },
  "colleague-feedback": {

@@ -34,8 +34,8 @@
     "description-text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
     "dialog-subtitle": "What is this project about?",
     "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-    "dialog-btn-github": "GitHub ↗",
-    "dialog-btn-live": "Live Test ↗",
+    "dialog-btn-github": "GitHub",
+    "dialog-btn-live": "Live Test",
     "dialog-btn-next": "Next project →"
   },
   "colleague-feedback": {

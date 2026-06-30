@@ -3,41 +3,44 @@
     
     <button class="project-dialog__close" aria-label="Close" (click)="onClose()">✕</button>
 
-    <div class="project-dialog__layout">
-      <div class="project-dialog__info">
-        <div class="project-dialog__header">
-          <span class="project-dialog__number">{{ project.number }}</span>
-          <h2 class="project-dialog__title">{{ project.title }}</h2>
+    <div class="project-dialog__content">
+      <div class="project-dialog__layout">
+        <div class="project-dialog__info">
+          <div class="project-dialog__header">
+            <span class="project-dialog__number">{{ project.number }}</span>
+            <h2 class="project-dialog__title">{{ project.title }}</h2>
+          </div>
+
+          <h3 class="project-dialog__subtitle">{{ 'projects-showcase.dialog-subtitle' | translate }}</h3>
+          <p class="project-dialog__description">{{ 'projects-showcase.description' | translate}}</p>
+
+          <div class="project-dialog__tech">
+            @for (tech of project.tech; track tech) {
+              <span class="tech-tag">
+                <img [src]="'assets/skill-icons-dialog/' + tech.toLowerCase() + '.svg'" [alt]="tech" class="tech-icon">
+                {{ tech }}
+              </span>
+            }
+          </div>
+
+          <div class="project-dialog__actions">
+            <a [href]="project.github" target="_blank" class="project-btn">
+              {{ 'projects-showcase.dialog-btn-github' | translate }}
+            </a>
+            <a [href]="project.live" target="_blank" class="project-btn">
+              {{ 'projects-showcase.dialog-btn-live' | translate }}
+            </a>
+          </div>
         </div>
 
-        <h3 class="project-dialog__subtitle">{{ 'projects-showcase.dialog-subtitle' | translate }}</h3>
-        <p class="project-dialog__description">{{ 'projects-showcase.description' | translate}}</p>
-
-        <div class="project-dialog__tech">
-          @for (tech of project.tech; track tech) {
-            <span class="tech-tag">
-              <img [src]="'assets/skill-icons-dialog/' + tech.toLowerCase() + '.svg'" [alt]="tech" class="tech-icon">
-              {{ tech }}
-            </span>
-          }
+        <div class="project-dialog__media">
+          <img [src]="project.img" [alt]="project.title + ' Preview'" class="project-dialog__img">
+          <button class="project-dialog__next" (click)="onNext($event)">
+            {{ 'projects-showcase.dialog-btn-next' | translate }}
+          </button>
         </div>
-
-        <div class="project-dialog__actions">
-          <a [href]="project.github" target="_blank" class="project-btn">
-            {{ 'projects-showcase.dialog-btn-github' | translate }}
-          </a>
-          <a [href]="project.live" target="_blank" class="project-btn">
-            {{ 'projects-showcase.dialog-btn-live' | translate }}
-          </a>
-        </div>
-      </div>
-
-      <div class="project-dialog__media">
-        <img [src]="project.img" [alt]="project.title + ' Preview'" class="project-dialog__img">
-        <button class="project-dialog__next" (click)="onNext($event)">
-          {{ 'projects-showcase.dialog-btn-next' | translate }}
-        </button>
       </div>
     </div>
+    
   </div>
 </div>
