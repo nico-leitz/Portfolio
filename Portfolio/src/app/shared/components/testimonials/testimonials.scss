@@ -39,7 +39,14 @@
     font-weight: 700;
     text-align: center;
     margin: 0;
-    padding: 0 2rem;
+    
+    @media (max-width: 480px) {
+      width: calc(100vw - 3.2rem) !important;
+      padding: 0 !important;
+      margin: 0 1.6rem !important;
+      box-sizing: border-box;
+      display: block;
+    }
   }
 
   &__viewport {
@@ -61,13 +68,6 @@
     gap: var(--card-gap);
     width: 100%; 
     transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
-
-    &--instant {
-      transition: none !important;
-      .feedback-card {
-        transition: none !important;
-      }
-    }
   }
 
   &__navigation {
@@ -86,24 +86,12 @@
     justify-content: center;
     padding: 1.2rem;
     transition: all 0.25s ease;
-
-    &:hover {
-      transform: none;
-
-      .feedback-carousel__icon {
-        color: #3dcfb6;
-        fill: #3dcfb6;
-        
-        filter: invert(20%) sepia(36%) saturate(692%) hue-rotate(119deg) brightness(96%) contrast(89%);
-      }
-    }
   }
 
   &__icon {
     width: clamp(4rem, 6vw, 5.6rem);
     height: clamp(4rem, 6vw, 5.6rem);
     object-fit: contain;
-    transition: filter 0.25s ease, color 0.25s ease;
   }
 
   &__pagination {
@@ -131,13 +119,10 @@
   background-color: rgba(28, 28, 28, 0.4);
   border: 1px solid rgba(61, 207, 182, 0.12);
   border-radius: 3rem;
-  
   width: var(--card-width); 
   min-height: var(--card-min-height);
-  height: auto; 
   padding: clamp(2.4rem, 5vw, 4.8rem);
   flex-shrink: 0;
-  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -146,20 +131,7 @@
 
   &--focused {
     border-color: #3dcfb6;
-    background-color: rgba(61, 207, 182, 0.04);
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  &--blurred {
-    border-color: #3dcfb6;
-    background-color: rgba(61, 207, 182, 0.04);
-    opacity: 0.25;
-    transform: scale(0.92);
-
-    @media (max-width: 768px) {
-      opacity: 0;
-    }
+    background-color: #3DCFB64D;
   }
 
   &__decorator {
@@ -171,6 +143,11 @@
     line-height: 1;
     color: #ffffff;
     z-index: 10;
+
+    @media (max-width: 768px) {
+      left: -1rem;
+      font-size: 16rem;
+    }
   }
 
   &__quote {
@@ -179,10 +156,7 @@
     line-height: 1.6;
     color: #e0e0e0;
     margin: 0;
-    
-    white-space: normal; 
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    text-align: left;
   }
 
   &__meta {
@@ -197,7 +171,7 @@
   &__divider {
     flex-grow: 1;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: #ffffff;
   }
 
   &__credits {
