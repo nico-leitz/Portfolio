@@ -44,6 +44,7 @@
     font-weight: 700;
     font-size: 2rem;
     color: #3dcfb6;
+    cursor: pointer;
   }
 
   &__logo-text {
@@ -80,7 +81,7 @@
     transition: color 0.3s ease;
     position: relative;
 
-    &:hover, &.active {
+    &:hover {
       color: #3dcfb6;
 
       &::after {
