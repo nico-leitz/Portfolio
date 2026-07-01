@@ -82,10 +82,11 @@
     }
   }
 
-  ::ng-deep &__link {
+  &__link {
     color: #3dcfb6;
     text-decoration: none;
     transition: all 0.3s ease;
+    cursor: pointer;
 
     &:hover {
       color: #ffffff;
@@ -186,7 +187,6 @@
       &::before {
         background-color: rgba(61, 207, 182, 0.15);
       }
-
       &::after {
         display: block;
       }
@@ -240,6 +240,24 @@
     font-size: 1.4rem;
     line-height: 1.6;
     padding-top: 0.2rem;
+  }
+
+  &__policy-link {
+    color: #3dcfb6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+
+    &:hover {
+      color: #ffffff;
+      text-decoration: underline;
+      text-decoration-color: #3dcfb6;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 6px;
+    }
   }
 
   &__actions {

@@ -9,7 +9,9 @@
         <p class="contact__text">
           {{ 'contact-area.info-text' | translate }}
         </p>
-        <p class="contact__text contact__text--bold" [innerHTML]="'contact-area.info-call-to-action' | translate">
+        <p class="contact__text contact__text--bold">
+          {{ 'contact-area.info-call-to-action-text' | translate }}
+          <a href="#contact" class="contact__link">{{ 'contact-area.info-call-to-action-link' | translate }}</a>
         </p>
       </div>
     </div>
@@ -58,7 +60,11 @@
               <input type="checkbox" name="policy" class="form__checkbox" ngModel required #policyCtrl="ngModel">
               <span class="form__checkmark"></span>
             </label>
-            <span class="form__policy-text" [innerHTML]="'contact-area.policy-agreement' | translate"></span>
+            <span class="form__policy-text">
+              {{ 'contact-area.policy-agreement-start' | translate }}
+              <a routerLink="/privacy-policy" class="form__policy-link">{{ 'contact-area.policy-agreement-link' | translate }}</a>
+              {{ 'contact-area.policy-agreement-end' | translate }}
+            </span>
           </div>
 
           @if (policyCtrl.invalid && (policyCtrl.touched || contactForm.submitted)) {

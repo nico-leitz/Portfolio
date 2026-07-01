@@ -4,9 +4,10 @@ import { FooterSection } from "../../shared/components/footer-section/footer-sec
 import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-legal-notice',
-  imports: [Header, FooterSection, TranslatePipe ,TranslateDirective],
-  templateUrl: './legal-notice.html',
-  styleUrl: './legal-notice.scss',
+  selector: 'app-privacy-policy',
+  standalone: true,
+  imports: [Header, FooterSection, TranslatePipe, TranslateDirective],
+  templateUrl: './privacy-policy.html',
+  styleUrl: './privacy-policy.scss',
 })
-export class LegalNotice {}
+export class PrivacyPolicy {}

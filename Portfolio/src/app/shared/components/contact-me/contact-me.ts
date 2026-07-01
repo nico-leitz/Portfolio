@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [FormsModule, TranslatePipe, TranslateDirective],
+  imports: [RouterLink ,FormsModule, TranslatePipe, TranslateDirective],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })
