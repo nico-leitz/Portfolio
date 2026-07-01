@@ -165,11 +165,9 @@
       justify-content: flex-end; 
       align-items: center;
       height: calc(100vh - 35%);
-      padding-bottom: 4rem;
 
       @media (max-width: 768px) {
         right: 2rem;
-        padding-bottom: 2rem;
       }
 
       .hero__line {
@@ -177,7 +175,6 @@
         filter: none !important;
         background-color: #fefefe !important;
         margin-top: 0;
-        margin-bottom: 2rem;
       }
     }
   }
