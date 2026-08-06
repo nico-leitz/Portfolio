@@ -12,10 +12,10 @@
       <h1 class="hero__name">Nico Leiteritz</h1>
       <div class="hero__buttons_wrapper">
         <a [routerLink]="['/']" fragment="projects" class="hero__button">
-          {{ 'hero-section.btn-check-work' | translate }}
+          <span>{{ 'hero-section.btn-check-work' | translate }}</span>
         </a>
         <a [routerLink]="['/']" fragment="contact" class="hero__button">
-          {{ 'hero-section.btn-contact' | translate }}
+          <span>{{ 'hero-section.btn-contact' | translate }}</span>
         </a>
       </div>
     </div>
@@ -36,17 +36,17 @@
   </div>
 
   <div class="hero__slider">
-  <div class="hero__track">
-    @for (item of [1,2,3,4,5,6,7,8,9,10]; track item) {
-      <div class="hero__text_group">
-        <span class="hero__text">{{ 'hero-section.job-title' | translate }}</span>
-        <span class="hero__bullet">•</span>
-        <span class="hero__text">{{ 'hero-section.ticker-based' | translate }}</span>
-        <span class="hero__bullet">•</span>
-        <span class="hero__text">{{ 'hero-section.ticker-remote' | translate }}</span>
-        <span class="hero__bullet">•</span>
-      </div>
-    }
+    <div class="hero__track">
+      @for (item of [1,2,3,4,5,6,7,8,9,10]; track item) {
+        <div class="hero__text_group">
+          <span class="hero__text">{{ 'hero-section.job-title' | translate }}</span>
+          <span class="hero__bullet">•</span>
+          <span class="hero__text">{{ 'hero-section.ticker-based' | translate }}</span>
+          <span class="hero__bullet">•</span>
+          <span class="hero__text">{{ 'hero-section.ticker-remote' | translate }}</span>
+          <span class="hero__bullet">•</span>
+        </div>
+      }
+    </div>
   </div>
-</div>
 </section>

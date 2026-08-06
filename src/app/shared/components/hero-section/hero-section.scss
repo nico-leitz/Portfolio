@@ -91,27 +91,20 @@
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     white-space: nowrap;
     text-decoration: none;
+    overflow: hidden;
 
-    &::after {
-      content: '\2197';
+    span {
       display: inline-block;
-      width: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: width 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-      transform: translateX(-0.5rem);
-      pointer-events: none;
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: transparent;
       border-color: #40d3b0;
       color: #40d3b0;
 
-      &::after {
-        width: auto;
-        opacity: 1;
-        transform: translateX(1.5rem);
+      span {
+        animation: hero-button-text-slide 700ms ease both;
       }
     }
   }
@@ -171,7 +164,7 @@
       }
 
       .hero__line {
-        height: 12rem;
+        height: 27rem;
         filter: none !important;
         background-color: #fefefe !important;
         margin-top: 0;
@@ -208,7 +201,7 @@
   &__email {
     color: white;
     font-family: 'Fira Code', monospace;
-    font-size: 1.4rem;
+    font-size: 1.7rem; // ANGEPASST
     text-decoration: none;
     letter-spacing: 0.1rem;
     writing-mode: vertical-rl;
@@ -274,11 +267,14 @@
     max-width: 99.9dvw;
     padding: 2rem 0;
     transform: rotate(-2deg);
-    background: rgba(62, 62, 62, 0.65);
-    backdrop-filter: blur(8px);
+    
+    background: #FFFFFF1F;
+    -webkit-backdrop-filter: blur(5.3px);
+    backdrop-filter: blur(5.3px);
+    z-index: 30;
+
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    z-index: 5;
 
     @media (max-width: 768px) {
       padding: 1.2rem 0;
@@ -334,11 +330,34 @@
     transform: translateY(4px);
   }
 }
+
 @keyframes scrollLeft {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes hero-button-text-slide {
+  0% {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+
+  45% {
+    opacity: 0;
+    transform: translateX(-140%) rotate(-12deg);
+  }
+
+  46% {
+    opacity: 0;
+    transform: translateX(140%) rotate(12deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
   }
 }
