@@ -5,7 +5,9 @@ header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json; charset=utf-8");
 
-$siteEmail = "ndesk.ltrz@gmail.com";
+$recipientEmail = "kontakt@nico-leiteritz.de";
+
+$senderEmail = "kontakt@nico-leiteritz.de"; 
 
 switch ($_SERVER['REQUEST_METHOD']) {
 
@@ -37,7 +39,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $safeEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
         $safeMessage = nl2br(htmlspecialchars($userMessage, ENT_QUOTES, 'UTF-8'));
 
-        $recipient = $siteEmail; 
         $subject = 'Website Contact Form';
 
         $mailBody = "
@@ -50,16 +51,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $headers = [];
         $headers[] = 'MIME-Version: 1.0';
         $headers[] = 'Content-type: text/html; charset=utf-8';
-        $headers[] = 'From: Website Kontakt <' . $siteEmail . '>'; 
-        $headers[] = 'Reply-To: ' . $email;
-        $headers[] = 'Return-Path: ' . $siteEmail; 
+        $headers[] = 'From: Website Kontakt <' . $senderEmail . '>'; 
+        $headers[] = 'Reply-To: ' . $safeEmail;
+        $headers[] = 'Return-Path: ' . $senderEmail; 
 
         $success = mail(
-            $recipient,
+            $recipientEmail,
             $subject,
             $mailBody,
             implode("\r\n", $headers),
-            '-f ' . $siteEmail 
+            '-f ' . $senderEmail
         );
 
         if ($success) {

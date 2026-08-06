@@ -12,6 +12,16 @@
     padding: 2rem 0;
   }
 
+  &__logo {
+    width: 1rem;
+    height: 1rem
+  }
+
+  &__icon {
+     width: 5rem;
+    height: 5rem
+  }
+
   &__inner {
     @include mx.global_content_wrapper();
     display: flex;
@@ -33,25 +43,11 @@
     gap: 1rem;
   }
 
-  &__logo-icon {
-    width: 3.6rem;
-    height: 3.6rem;
-    border: 2px solid #3dcfb6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-secondary, 'Karla', sans-serif);
-    font-weight: 700;
-    font-size: 2rem;
-    color: #3dcfb6;
-    cursor: pointer;
-  }
-
   &__logo-text {
     display: flex;
     flex-direction: column;
     font-family: var(--font-secondary, 'Karla', sans-serif);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 1;
     color: #ffffff;
