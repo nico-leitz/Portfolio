@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
 import { Project } from '../../interfaces/project';
 import { FeaturedProjectsDialog } from '../featured-projects-dialog/featured-projects-dialog';
-import {TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
+/**
+ * @description
+ * A component that showcases a list of featured portfolio projects.
+ * It manages the display of project summaries and handles the state, 
+ * layout locking, and navigation for a detailed project modal dialog.
+ */
 @Component({
   selector: 'app-featured-projects',
   imports: [FeaturedProjectsDialog, TranslatePipe],
@@ -10,6 +16,13 @@ import {TranslatePipe } from '@ngx-translate/core';
   styleUrl: './featured-projects.scss',
 })
 export class FeaturedProjects {
+  /**
+   * A static array containing the data for the featured projects.
+   * Includes metadata such as the project's title, technologies used, 
+   * description, image assets, and external links.
+   * 
+   * @type {Project[]}
+   */
   projects: Project[] = [
     {
       number: '01',
@@ -33,20 +46,60 @@ export class FeaturedProjects {
     },
   ];
 
+  /**
+   * Holds the currently selected project to be displayed in the detailed dialog.
+   * When this is set to `null`, the dialog is hidden.
+   * 
+   * @type {Project | null}
+   */
   activeProject: Project | null = null;
   
+  /**
+   * Tracks the project currently being hovered over by the user's cursor.
+   * Typically used in the template to apply dynamic CSS styles or hover animations.
+   * 
+   * @type {Project | null}
+   */
   hoveredProject: Project | null = null;
 
+  /**
+   * Opens the detailed modal dialog for a specific project.
+   * 
+   * Updates the `activeProject` state and disables scrolling on the document 
+   * body to ensure the user cannot scroll the background while the modal is open.
+   * 
+   * @param {Project} project - The project instance to display in the dialog.
+   * @returns {void}
+   */
   openProjectDialog(project: Project): void {
     this.activeProject = project;
     document.body.style.overflow = 'hidden';
   }
 
+  /**
+   * Closes the project detail dialog.
+   * 
+   * Clears the `activeProject` state and restores the default scrolling 
+   * behavior of the browser window.
+   * 
+   * @returns {void}
+   */
   closeProjectDialog(): void {
     this.activeProject = null;
     document.body.style.overflow = '';
   }
 
+  /**
+   * Navigates to the next project in the list while the dialog is open.
+   * 
+   * Calculates the current project's index and smoothly loops back to the first 
+   * project if the end of the array is reached. It also stops event propagation 
+   * to prevent the click from bubbling up and unintentionally closing the dialog 
+   * (e.g., if the button is overlaying a backdrop).
+   * 
+   * @param {Event} event - The DOM event triggered by clicking the "next" button.
+   * @returns {void}
+   */
   nextProject(event: Event): void {
     event.stopPropagation();
     if (!this.activeProject) return;
