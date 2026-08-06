@@ -26,30 +26,30 @@
         </div>
       }
 
-      <form class="form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="form__group">
           <label for="name" class="form__label">{{ 'contact-area.label-name' | translate }}</label>
-          <input type="text" id="name" name="name" class="form__input" [placeholder]="'contact-area.placeholder-name' | translate" ngModel required #nameCtrl="ngModel">
+          <input type="text" id="name" formControlName="name" class="form__input" [placeholder]="'contact-area.placeholder-name' | translate">
           
-          @if (nameCtrl.invalid && (nameCtrl.touched || contactForm.submitted)) {
+          @if (contactForm.get('name')?.invalid && (contactForm.get('name')?.touched || submitAttempt())) {
             <span class="form__error">{{ 'contact-area.error-name' | translate }}</span>
           }
         </div>
 
         <div class="form__group">
           <label for="email" class="form__label">{{ 'contact-area.label-email' | translate }}</label>
-          <input type="email" id="email" name="email" class="form__input" [placeholder]="'contact-area.placeholder-email' | translate" ngModel required email #emailCtrl="ngModel">
+          <input type="email" id="email" formControlName="email" class="form__input" [placeholder]="'contact-area.placeholder-email' | translate">
           
-          @if (emailCtrl.invalid && (emailCtrl.touched || contactForm.submitted)) {
+          @if (contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || submitAttempt())) {
             <span class="form__error">{{ 'contact-area.error-email' | translate }}</span>
           }
         </div>
 
         <div class="form__group">
           <label for="message" class="form__label">{{ 'contact-area.label-message' | translate }}</label>
-          <textarea id="message" name="message" class="form__input form__textarea" [placeholder]="'contact-area.placeholder-message' | translate" ngModel required #messageCtrl="ngModel"></textarea>
+          <textarea id="message" formControlName="message" class="form__input form__textarea" [placeholder]="'contact-area.placeholder-message' | translate"></textarea>
           
-          @if (messageCtrl.invalid && (messageCtrl.touched || contactForm.submitted)) {
+          @if (contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || submitAttempt())) {
             <span class="form__error">{{ 'contact-area.error-message' | translate }}</span>
           }
         </div>
@@ -57,7 +57,7 @@
         <div class="form__policy-group">
           <div class="form__checkbox-layout">
             <label class="form__checkbox-wrapper">
-              <input type="checkbox" name="policy" class="form__checkbox" ngModel required #policyCtrl="ngModel">
+              <input type="checkbox" formControlName="policy" class="form__checkbox">
               <span class="form__checkmark"></span>
             </label>
             <span class="form__policy-text">
@@ -67,7 +67,7 @@
             </span>
           </div>
 
-          @if (policyCtrl.invalid && (policyCtrl.touched || contactForm.submitted)) {
+          @if (contactForm.get('policy')?.invalid && (contactForm.get('policy')?.touched || submitAttempt())) {
             <span class="form__error form__error--policy">{{ 'contact-area.error-policy' | translate }}</span>
           }
         </div>
