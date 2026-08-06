@@ -9,11 +9,7 @@
   color: #ffffff;
   font-family: 'Fira Code', monospace;
   background-color: rgb(15, 15, 15);
-  position: relative;
-  
-  // DIE ULTIMATIVE RETTUNG: Garantiert absolut KEINE Scrollbalken mehr (weder X noch Y)
-  overflow: hidden; 
-  
+  position: relative; 
   padding: 8rem 0;
 
   @media (max-width: 768px) {
@@ -32,7 +28,6 @@
     position: relative; 
     z-index: 1;
 
-    // DER REVOLUTIONÄRE GLOW
     &::before {
       content: '';
       position: absolute;
@@ -49,7 +44,6 @@
       pointer-events: none; 
       z-index: -1; 
 
-      // RESPONSIVE OPTIMIERUNG: Macht den Glow auf Handys kleiner, damit er kein Chaos anrichtet
       @media (max-width: 1024px) {
         width: 55rem;
         height: 55rem;
@@ -64,7 +58,7 @@
         width: 32rem;
         height: 32rem;
         left: -5rem;
-        top: 25%; // Schiebt das Leuchten auf Mobile etwas höher zur Überschrift
+        top: 25%;
       }
     }
 
@@ -330,7 +324,7 @@
       bottom: calc(100% + 1.8rem);
       left: 50%;
 
-      background: #ffffff !important;
+      background: #ffffff;
       padding: 1.6rem 2.4rem;
       border-radius: 1.8rem;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -353,7 +347,7 @@
         left: 25%;
         width: 12px;
         height: 12px;
-        background: #ffffff !important;
+        background: #ffffff;
 
         transform: translateX(-50%) rotate(45deg);
         box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.12);
@@ -361,7 +355,7 @@
       }
 
       &-text {
-        color: #3dcfb6 !important;
+        color: #3dcfb6;
         font-family: 'Karla', sans-serif;
         font-size: 1.5rem;
         font-weight: 500;
@@ -392,7 +386,7 @@
           }
 
           span {
-            color: #3dcfb6 !important;
+            color: #3dcfb6;
             font-family: 'Karla', sans-serif;
             font-size: 1.2rem;
             font-weight: 700;
