@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Project } from '../../interfaces/project';
 import { FeaturedProjectsDialog } from '../featured-projects-dialog/featured-projects-dialog';
-import {TranslatePipe, TranslateDirective} from '@ngx-translate/core';
+import {TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-featured-projects',
-  imports: [FeaturedProjectsDialog, TranslatePipe, TranslateDirective],
+  imports: [FeaturedProjectsDialog, TranslatePipe],
   templateUrl: './featured-projects.html',
   styleUrl: './featured-projects.scss',
 })
@@ -18,8 +18,8 @@ export class FeaturedProjects {
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       img: '/assets/featured-projects/join.svg',
-      github: '#',
-      live: '#',
+      github: 'https://github.com/nico-leitz/Join',
+      live: 'https://join.nico-leiteritz.de',
     },
     {
       number: '02',
@@ -29,7 +29,7 @@ export class FeaturedProjects {
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       img: '/assets/featured-projects/epl.svg',
       github: 'https://github.com/nico-leitz/El_Pollo_Loco',
-      live: '#',
+      live: 'https://el-pollo-loco.nico-leiteritz.de',
     },
   ];
 
