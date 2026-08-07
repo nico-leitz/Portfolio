@@ -1,20 +1,22 @@
+@use 'abstracts/mixins';
+
 @font-face {
   font-family: "Fira Code";
-  src: url("../public/assets/fonts/Fira_Code/static/FiraCode-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Fira_Code/static/FiraCode-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Karla";
-  src: url("../public/assets/fonts/Karla/static/Karla-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Karla/static/Karla-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Bilbo";
-  src: url("../public/assets/fonts/Bilbo/Bilbo-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Bilbo/Bilbo-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -23,7 +25,6 @@
   --font-primary: "Fira Code", monospace; 
   --hero-gradient: radial-gradient(ellipse at 85% 25%, #08463B 0%, #1C1C1C 60%);
   --line-color: rgba(0, 0, 0, 0.321);
-  
 }
 
 .dark-mode {
@@ -43,5 +44,3 @@ html {
 body {
   overflow-x: hidden;
 }
-
-

@@ -1,0 +1,96 @@
+<section class="feedback-carousel" aria-label="Kollegen Feedback Karussell">
+  <div class="feedback-carousel__inner">
+    <h2 class="feedback-carousel__title">{{ 'colleague-feedback.main-title' | translate }}</h2>
+
+    <div class="feedback-carousel__viewport">
+      <div class="feedback-carousel__track" role="region" aria-roledescription="Karussell">
+        
+        @if (testimonial.length === 0) {
+          <div class="feedback-card feedback-card--active">
+            <p class="feedback-card__quote">
+              {{ 'colleague-feedback.placeholder' | translate }}
+            </p>
+          </div>
+        } @else {
+          @for (entry of testimonial; track $index; let i = $index) {
+            <div
+              class="feedback-card"
+              [class]="getCardClass(i)"
+              [attr.aria-hidden]="i !== activeIndex ? 'true' : null"
+            >
+              @if (i === activeIndex) {
+                <img class="feedback-carousel__quotes" src="assets/testimonials/quotes.svg" alt="quotes">
+              }
+
+              <p class="feedback-card__quote">
+                {{ entry.text }}
+              </p>
+
+              <div class="feedback-card__meta">
+                <span class="feedback-card__divider" aria-hidden="true"></span>
+                <span class="feedback-card__credits">{{ entry.author }}</span>
+              </div>
+            </div>
+          }
+        }
+
+      </div>
+    </div>
+
+    @if (testimonial.length > 1) {
+      <div class="feedback-carousel__navigation">
+        <button
+          class="feedback-carousel__trigger"
+          (click)="arrowBack()"
+          (mouseenter)="isBackHovered = true"
+          (mouseleave)="isBackHovered = false"
+          type="button"
+          aria-label="Vorheriges Testimonial"
+        >
+          <img
+            class="feedback-carousel__icon"
+            [src]="
+              isBackHovered
+                ? 'assets/testimonials/arrow_back_hover.svg'
+                : 'assets/testimonials/arrow_back.svg'
+            "
+            alt="arrow back"
+          />
+        </button>
+
+        <div class="feedback-carousel__pagination" role="tablist" aria-label="Karussell Folien">
+          @for (dot of testimonial; track $index; let i = $index) {
+            <button
+              class="feedback-carousel__dot"
+              [class.feedback-carousel__dot--active]="i === activeIndex"
+              (click)="jumpTo(i)"
+              type="button"
+              role="tab"
+              [attr.aria-selected]="i === activeIndex"
+              [attr.aria-label]="'Gehe zu Testimonial ' + (i + 1)"
+            ></button>
+          }
+        </div>
+
+        <button
+          class="feedback-carousel__trigger"
+          (click)="arrowNext()"
+          (mouseenter)="isNextHovered = true"
+          (mouseleave)="isNextHovered = false"
+          type="button"
+          aria-label="Nächstes Testimonial"
+        >
+          <img
+            class="feedback-carousel__icon"
+            [src]="
+              isNextHovered
+                ? 'assets/testimonials/arrow_forward_hover.svg'
+                : 'assets/testimonials/arrow_forward.svg'
+            "
+            alt="arrow next"
+          />
+        </button>
+      </div>
+    }
+  </div>
+</section>
