@@ -1,12 +1,18 @@
 @use 'abstracts/mixins' as mx;
 
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .privacy-policy {
   position: relative;
   background-color: #1C1C1C;
   background-image: radial-gradient(
     circle at 60% 15%,
     rgba(30, 85, 75, 0.45) 0%,
-    rgba(15, 15, 15, 1) 55%
+    rgba(28, 28, 28, 1) 55%
   );
   flex: 1;
   padding: 14rem 2.4rem 8rem 2.4rem; 

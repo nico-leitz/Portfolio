@@ -1,35 +1,39 @@
-<app-header></app-header>
-<main class="legal-notice" id="main-content">
-  <div class="legal-notice__inner">
-    <h1 class="legal-notice__headline">{{ 'legal-notice.headline' | translate }}</h1>
+<div class="app-wrapper">
+  <app-header></app-header>
+  
+  <main class="legal-notice" id="main-content">
+    <div class="legal-notice__inner">
+      <h1 class="legal-notice__headline">{{ 'legal-notice.headline' | translate }}</h1>
 
-    <div class="legal-notice__content">
-      <section class="legal-notice__section">
-        <h2 class="legal-notice__subheadline">{{ 'legal-notice.imprint-sub' | translate }}</h2>
-        <p>
-          Nico Leiteritz<br>
-          Herzoggraben 16b<br>
-          84405 Dorfen
-        </p>
-      </section>
+      <div class="legal-notice__content">
+        <section class="legal-notice__section">
+          <h2 class="legal-notice__subheadline">{{ 'legal-notice.imprint-sub' | translate }}</h2>
+          <p>
+            Nico Leiteritz<br>
+            Herzoggraben 16b<br>
+            84405 Dorfen
+          </p>
+        </section>
 
-      <section class="legal-notice__section">
-        <h2 class="legal-notice__subheadline">{{ 'legal-notice.contact-sub' | translate }}</h2>
-        <p>
-          E-Mail: <a href="ndesk.ltrz@gmail.com" class="legal-notice__link">ndesk.ltrz@gmail.com</a>
-        </p>
-      </section>
+        <section class="legal-notice__section">
+          <h2 class="legal-notice__subheadline">{{ 'legal-notice.contact-sub' | translate }}</h2>
+          <p>
+            E-Mail: <a href="mailto:kontakt@nico-leiteritz.de" class="legal-notice__link">kontakt@nico-leiteritz.de</a>
+          </p>
+        </section>
 
-      <section class="legal-notice__section">
-        <h2 class="legal-notice__subheadline">{{ 'legal-notice.liability-sub' | translate }}</h2>
-        <p>{{ 'legal-notice.liability-text' | translate }}</p>
-      </section>
-      
-      <section class="legal-notice__section">
-        <h2 class="legal-notice__subheadline">{{ 'legal-notice.copyright-sub' | translate }}</h2>
-        <p>{{ 'legal-notice.copyright-text' | translate }}</p>
-      </section>
+        <section class="legal-notice__section">
+          <h2 class="legal-notice__subheadline">{{ 'legal-notice.liability-sub' | translate }}</h2>
+          <p>{{ 'legal-notice.liability-text' | translate }}</p>
+        </section>
+        
+        <section class="legal-notice__section">
+          <h2 class="legal-notice__subheadline">{{ 'legal-notice.copyright-sub' | translate }}</h2>
+          <p>{{ 'legal-notice.copyright-text' | translate }}</p>
+        </section>
+      </div>
     </div>
-  </div>
-</main>
-<app-footer-section></app-footer-section>
+  </main>
+  
+  <app-footer-section></app-footer-section>
+</div>
