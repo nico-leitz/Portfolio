@@ -56,15 +56,15 @@
 
         <div class="form__policy-group">
           <div class="form__checkbox-layout">
-            <label class="form__checkbox-wrapper">
-              <input type="checkbox" formControlName="policy" class="form__checkbox">
+            <div class="form__checkbox-wrapper">
+              <input type="checkbox" id="policy-checkbox" formControlName="policy" class="form__checkbox">
               <span class="form__checkmark"></span>
-            </label>
-            <span class="form__policy-text">
+            </div>
+            <label for="policy-checkbox" class="form__policy-text">
               {{ 'contact-area.policy-agreement-start' | translate }}
               <a routerLink="/privacy-policy" class="form__policy-link">{{ 'contact-area.policy-agreement-link' | translate }}</a>
               {{ 'contact-area.policy-agreement-end' | translate }}
-            </span>
+            </label>
           </div>
 
           @if (contactForm.get('policy')?.invalid && (contactForm.get('policy')?.touched || submitAttempt())) {
