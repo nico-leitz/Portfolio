@@ -1,7 +1,9 @@
 <div class="dialog-overlay" (click)="onClose()">
   <div class="project-dialog" (click)="$event.stopPropagation()">
     
-    <button class="project-dialog__close" aria-label="Close" (click)="onClose()">✕</button>
+    <div class="project-dialog__close-wrapper">
+      <button class="project-dialog__close" aria-label="Close" (click)="onClose()">✕</button>
+    </div>
 
     <div class="project-dialog__content">
       <div class="project-dialog__layout">

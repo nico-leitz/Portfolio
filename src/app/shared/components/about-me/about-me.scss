@@ -40,6 +40,10 @@
     }
   }
 
+  &__img {
+    object-position: center 15%;
+  }
+
   &__wrapper {
     @include mx.flexbox(row, space-between, center);
     gap: 9.6rem;

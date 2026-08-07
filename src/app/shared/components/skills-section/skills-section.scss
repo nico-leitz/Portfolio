@@ -1,16 +1,24 @@
 @use '../../../abstract/mixins' as mx;
- 
+
 :host {
   display: block;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .section_skills {
   color: #ffffff;
   font-family: 'Fira Code', monospace;
   background-color: rgb(15, 15, 15);
-  position: relative; 
+  position: relative;
   padding: 8rem 0;
+
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 
   @media (max-width: 768px) {
     padding: 5rem 0;
@@ -25,24 +33,25 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    position: relative; 
+    position: relative;
     z-index: 1;
+    box-sizing: border-box;
 
     &::before {
       content: '';
       position: absolute;
       top: 50%;
-      left: -20rem; 
+      left: -20rem;
       transform: translateY(-30%);
-      
-      width: 70rem;       
+
+      width: 70rem;
       height: 70rem;
       border-radius: 50%;
-      
+
       background: radial-gradient(circle, rgba(8, 70, 59, 0.45) 0%, rgba(15, 15, 15, 0) 70%);
-      filter: blur(90px); 
-      pointer-events: none; 
-      z-index: -1; 
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: -1;
 
       @media (max-width: 1024px) {
         width: 55rem;
@@ -86,6 +95,7 @@
     @include mx.flexbox(row, space-between, center);
     gap: 9.6rem;
     width: 100%;
+    box-sizing: border-box;
 
     @media (max-width: 1250px) {
       flex-direction: column;
@@ -101,6 +111,7 @@
     width: 100%;
     max-width: 56.8rem;
     flex-shrink: 1;
+    box-sizing: border-box;
 
     @media (max-width: 1024px) {
       max-width: 100%;
@@ -132,6 +143,7 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    box-sizing: border-box;
 
     @media (max-width: 768px) {
       gap: 3rem;
@@ -237,6 +249,7 @@
     font-size: 1.6rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 
     &:hover {
       border-color: #3dcfb6;
@@ -246,7 +259,7 @@
 
     @media (max-width: 480px) {
       padding: 1rem 2.8rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
 
@@ -254,6 +267,7 @@
     width: 100%;
     max-width: 56.8rem;
     flex-shrink: 1;
+    box-sizing: border-box;
 
     @media (max-width: 1024px) {
       max-width: 100%;
@@ -315,7 +329,7 @@
       line-height: 1.2;
 
       @media (max-width: 480px) {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
       }
     }
 
@@ -357,7 +371,7 @@
       &-text {
         color: #3dcfb6;
         font-family: 'Karla', sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-weight: 500;
         text-align: center;
         line-height: 1.3;
@@ -388,7 +402,7 @@
           span {
             color: #3dcfb6;
             font-family: 'Karla', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             font-weight: 700;
           }
         }
