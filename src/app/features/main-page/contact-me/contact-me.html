@@ -56,24 +56,25 @@
 
         <div class="form__policy-group">
           <div class="form__checkbox-layout">
-            <div class="form__checkbox-wrapper">
-              <input type="checkbox" id="policy-checkbox" formControlName="policy" class="form__checkbox">
+            <label class="form__checkbox-wrapper" for="policy-checkbox">
+              <input type="checkbox" id="policy-checkbox" formControlName="policy" class="form__checkbox" aria-labelledby="policy-desc">
               <span class="form__checkmark"></span>
-            </div>
-            <label for="policy-checkbox" class="form__policy-text">
-              {{ 'contact-area.policy-agreement-start' | translate }}
-              <a routerLink="/privacy-policy" class="form__policy-link">{{ 'contact-area.policy-agreement-link' | translate }}</a>
-              {{ 'contact-area.policy-agreement-end' | translate }}
             </label>
+            
+            <div id="policy-desc" class="form__policy-text">
+              {{ 'contact-area.policy-agreement-start' | translate }}
+              <a routerLink="/privacy-policy" class="form__policy-link" (click)="$event.stopPropagation()">{{ 'contact-area.policy-agreement-link' | translate }}</a>
+              {{ 'contact-area.policy-agreement-end' | translate }}
+            </div>
           </div>
 
           @if (contactForm.get('policy')?.invalid && (contactForm.get('policy')?.touched || submitAttempt())) {
-            <span class="form__error form__error--policy">{{ 'contact-area.error-policy' | translate }}</span>
+            <span class="form__error form__error--policy" aria-live="polite">{{ 'contact-area.error-policy' | translate }}</span>
           }
         </div>
 
         <div class="form__actions">
-          <button type="submit" class="form__submit" [disabled]="contactForm.invalid">{{ 'contact-area.submit-btn' | translate }}</button>
+          <button type="submit" class="form__submit">{{ 'contact-area.submit-btn' | translate }}</button>
         </div>
       </form>
     </div>
