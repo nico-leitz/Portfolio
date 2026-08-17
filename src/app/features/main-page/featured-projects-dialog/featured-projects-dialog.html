@@ -14,7 +14,7 @@
           </div>
 
           <h3 class="project-dialog__subtitle">{{ 'projects-showcase.dialog-subtitle' | translate }}</h3>
-          <p class="project-dialog__description">{{ 'projects-showcase.description' | translate}}</p>
+          <p class="project-dialog__description">{{ project.description }}</p>
 
           <div class="project-dialog__tech">
             @for (tech of project.tech; track tech) {
