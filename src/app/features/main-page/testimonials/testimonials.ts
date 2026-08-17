@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { TranslatePipe } from '@ngx-translate/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 /**
  * @description
@@ -8,8 +9,8 @@ import { TranslatePipe } from '@ngx-translate/core';
 interface Testimonial {
   /** The content or quote provided by the author. */
   text: string;
-  /** The name and role of the person providing the testimonial. */
-  author: string;
+  /** The name of the person providing the testimonial. */
+  name: string;
 }
 
 /**
@@ -26,18 +27,14 @@ interface Testimonial {
   templateUrl: './testimonials.html',
   styleUrl: './testimonials.scss',
 })
-export class Testimonials {
+export class Testimonials implements OnInit, OnDestroy {
   /**
    * The collection of testimonials to be displayed in the carousel.
+   * Loaded dynamically via TranslateService.
    * 
    * @type {Testimonial[]}
    */
-  public testimonial: Testimonial[] = [
-    { text: 'Test 1', author: 'T.Schulz - Frontend Developer' },
-    { text: 'Test 2', author: 'H.Janisch - Team Partner' },
-    { text: 'Test 3', author: 'M.Mustermann - Developer' },
-    { text: 'Test 4', author: 'S.Berger - Fullstack Dev' },
-  ];
+  public testimonial: Testimonial[] = [];
 
   /**
    * Tracks whether the user is hovering over the "Back" navigation arrow.
@@ -61,6 +58,31 @@ export class Testimonials {
    * @type {number}
    */
   public activeIndex = 0;
+
+  private translationSub?: Subscription;
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit(): void {
+    // Lädt die Testimonials aus dem JSON und lauscht auf Sprachwechsel
+    this.translationSub = this.translate
+      .stream('colleague-feedback.testimonials')
+      .subscribe((data: Testimonial[]) => {
+        this.testimonial = data || [];
+        
+        // Verhindert Fehler, falls das Array nach einem Sprachwechsel kürzer sein sollte
+        if (this.activeIndex >= this.testimonial.length) {
+          this.activeIndex = 0;
+        }
+      });
+  }
+
+  ngOnDestroy(): void {
+    // Memory Leaks verhindern
+    if (this.translationSub) {
+      this.translationSub.unsubscribe();
+    }
+  }
 
   /**
    * Advances the carousel to the next testimonial.
@@ -97,13 +119,8 @@ export class Testimonials {
    * Determines the structural CSS class for a given testimonial card based on its 
    * position relative to the currently active index.
    * 
-   * This handles the visual layering and positioning (e.g., sliding off-screen, 
-   * scaling down in the background) for smooth CSS transitions.
-   * 
    * @param {number} index - The index of the card being evaluated.
-   * @returns {string} The CSS class representing the card's positional state:
-   *                   'feedback-card--active', 'feedback-card--previous', 
-   *                   'feedback-card--next', or 'feedback-card--hidden'.
+   * @returns {string} The CSS class representing the card's positional state.
    */
   public getCardClass(index: number): string {
     if (index === this.activeIndex) {
@@ -120,12 +137,12 @@ export class Testimonials {
 
   /**
    * Calculates the index immediately preceding the active index.
-   * Creates an infinite loop effect by returning the last index if the active index is 0.
    * 
    * @private
    * @returns {number} The index of the previous item.
    */
   private getPreviousIndex(): number {
+    if (this.testimonial.length === 0) return 0;
     return this.activeIndex === 0
       ? this.testimonial.length - 1
       : this.activeIndex - 1;
@@ -133,12 +150,12 @@ export class Testimonials {
 
   /**
    * Calculates the index immediately following the active index.
-   * Creates an infinite loop effect by returning 0 if the active index is the last item.
    * 
    * @private
    * @returns {number} The index of the next item.
    */
   private getNextIndex(): number {
+    if (this.testimonial.length === 0) return 0;
     return this.activeIndex === this.testimonial.length - 1
       ? 0
       : this.activeIndex + 1;

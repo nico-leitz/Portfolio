@@ -40,7 +40,20 @@
   },
   "colleague-feedback": {
     "main-title": "Das sagen Kollegen über mich",
-    "placeholder": "Feedback folgt in Kürze – aktuell fokussiere ich mich auf spannende neue Projekte."
+    "testimonials": [
+      {
+        "name": "Oliver Dorsheimer",
+        "text": "Die Zusammenarbeit mit Nico war eine absolute Bereicherung. Anfang 2026 haben wir gemeinsam an einem Frontend-Projekt gearbeitet, bei dem er sich durch sein außerordentliches Engagement im gesamten Team hervorgetan hat. Als unvorhergesehene Bugs auftraten, hat er proaktiv die Initiative ergriffen und die Probleme rechtzeitig vor der Deadline mit hochwertigen Lösungen behoben."
+      },
+      {
+        "name": "Sahin Varol",
+        "text": "Nico hat bei unserem Webentwicklungsprojekt hervorragende Arbeit geleistet. Er arbeitete stets zuverlässig, strukturiert und achtete konsequent auf höchste Qualität. Auch bei Herausforderungen blieb er fokussiert und fand zielgerichtete Lösungen. Er war ein äußerst wertvolles Teammitglied und maßgeblich am Erfolg des Projekts beteiligt."
+      },
+      {
+        "name": "Bastian Wollny",
+        "text": "Die Zusammenarbeit mit Nico beim JOIN-Projekt war für mich eine sehr wertvolle Erfahrung. Ich konnte mich stets darauf verlassen, dass er auch komplexe Aufgaben ruhig, durchdacht und mit großer Detailgenauigkeit anging. Seine Neugier und sein Fokus haben das Team oft dazu motiviert, die Dinge genauer zu betrachten und gemeinsam nach der besten Lösung zu suchen. Besonders schätze ich die Erinnerungen an unsere langen Coding-Nächte, die sein Engagement und unsere hervorragende Teamdynamik gezeigt haben."
+      }
+    ]
   },
   "contact-area": {
     "sub-title": "Kontakt",
@@ -93,11 +106,9 @@
     "sec1-coll-text2": "Wie erfassen wir Ihre Daten? Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).",
     "sec1-coll-text3": "Wofür nutzen wir Ihre Daten? Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.",
     "sec1-coll-text4": "Welche Rechte haben Sie bezüglich Ihrer Daten? Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen.",
-    
     "sec2-title": "2. Hosting",
     "sec2-host-sub": "Externes Hosting bei Hetzner",
     "sec2-host-text": "Wir hosten unsere Website bei der Hetzner Online GmbH. Anbieter ist die Hetzner Online GmbH, Industriestr. 25, 91152 Pleinfeld (nachfolgend Hetzner). Wenn Sie unsere Website besuchen, erfasst Hetzner verschiedene Server-Logfiles inklusive Ihrer IP-Adressen. Details entnehmen Sie der Datenschutzerklärung von Hetzner: https://www.hetzner.com/de/legal/privacy-policy/. Die Verwendung von Hetzner erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website.",
-    
     "sec3-title": "3. Allgemeine Hinweise und Pflichtinformationen",
     "sec3-prot-sub": "Datenschutz",
     "sec3-prot-text": "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.",
@@ -113,15 +124,13 @@
     "sec3-com-text": "Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu.",
     "sec3-ssl-sub": "SSL- bzw. TLS-Verschlüsselung",
     "sec3-ssl-text": "Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie an dem Schloss-Symbol in Ihrer Browserzeile.",
-    
     "sec4-title": "4. Datenerfassung auf dieser Website",
     "sec4-log-sub": "Server-Log-Dateien",
     "sec4-log-text": "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind: Browsertyp/Version, verwendetes Betriebssystem, Referrer URL, Hostname, Uhrzeit der Serveranfrage, IP-Adresse. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.",
     "sec4-mail-sub": "Anfrage per E-Mail oder Kontaktformular",
     "sec4-mail-text": "Wenn Sie mich per E-Mail oder Kontaktformular kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei mir gespeichert und verarbeitet. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.",
-    
     "sec5-title": "5. Plugins und Tools",
     "sec5-font-sub": "Google Fonts (lokales Hosting)",
     "sec5-font-text": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet dabei nicht statt."
-}
+  }
 }

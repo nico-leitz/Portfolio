@@ -192,8 +192,28 @@
     line-height: 1.4;
     color: #ffffff; 
     margin: 0;
-    overflow: hidden;
     flex: 1;
+    
+    overflow-y: auto; 
+    padding-right: 1rem;
+
+    &::-webkit-scrollbar {
+      width: 6px; 
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1); 
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: rgba(61, 207, 182, 0.5); 
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(61, 207, 182, 1); 
+    }
   }
 
   &__meta {
